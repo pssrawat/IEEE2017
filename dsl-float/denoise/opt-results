@@ -1,0 +1,17 @@
+==147484== NVPROF is profiling process 147484, command: ./test
+==147484== Profiling application: ./test
+==147484== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+335.75ms  61.811ms                    -               -         -         -         -  512.00MB  8.0891GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+398.49ms  61.679ms                    -               -         -         -         -  512.00MB  8.1064GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+460.81ms  5.6642ms            (19 19 1)       (32 32 1)        24  12.000KB        0B         -           -           -           -  Tesla P100-PCIE         1         7  denoise(float*, float*, float*, float, float, float, int, int, int) [120]
+466.47ms  5.6515ms            (19 19 1)       (32 32 1)        24  12.000KB        0B         -           -           -           -  Tesla P100-PCIE         1         7  denoise(float*, float*, float*, float, float, float, int, int, int) [131]
+472.12ms  5.9091ms            (19 19 1)       (32 32 1)        24  12.000KB        0B         -           -           -           -  Tesla P100-PCIE         1         7  denoise(float*, float*, float*, float, float, float, int, int, int) [142]
+478.03ms  5.8810ms            (19 19 1)       (32 32 1)        24  12.000KB        0B         -           -           -           -  Tesla P100-PCIE         1         7  denoise(float*, float*, float*, float, float, float, int, int, int) [153]
+483.92ms  86.492ms                    -               -         -         -         -  512.00MB  5.7809GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

@@ -1,0 +1,12 @@
+enabled = 1
+117373
+Time taken by reference : 0.164847 secs
+Values at index (4,9) differ : 0.099646 and 0.099646
+Values at index (4,39) differ : 0.106482 and 0.106482
+Values at index (4,163) differ : 0.106915 and 0.106915
+Values at index (4,365) differ : 0.101855 and 0.101855
+Values at index (4,580) differ : 0.092079 and 0.092079
+Values at index (5,2440) differ : 0.137949 and 0.137949
+Values at index (2572,1266) differ : 0.150903 and 0.150903
+[Test] Max Error : 1.110223e-16 @ (,2572,1266)
+[Test] RMS Error : 1.306341e-17

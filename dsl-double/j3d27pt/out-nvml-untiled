@@ -1,0 +1,39 @@
+enabled = 1
+115169
+Values at index (4,4,4) differ : 0.000286 and 0.000286
+Values at index (4,4,6) differ : 0.000283 and 0.000283
+Values at index (4,4,7) differ : 0.000285 and 0.000285
+Values at index (4,4,8) differ : 0.000290 and 0.000290
+Values at index (4,4,9) differ : 0.000295 and 0.000295
+Values at index (4,4,32) differ : 0.000292 and 0.000292
+Values at index (4,4,33) differ : 0.000296 and 0.000296
+Values at index (4,4,143) differ : 0.000298 and 0.000298
+Values at index (4,4,144) differ : 0.000295 and 0.000295
+Values at index (4,4,272) differ : 0.000307 and 0.000307
+Values at index (4,4,273) differ : 0.000309 and 0.000309
+Values at index (4,4,281) differ : 0.000309 and 0.000309
+Values at index (4,4,450) differ : 0.000308 and 0.000308
+Values at index (4,4,451) differ : 0.000309 and 0.000309
+Values at index (4,4,457) differ : 0.000315 and 0.000315
+Values at index (4,5,456) differ : 0.000315 and 0.000315
+Values at index (4,5,457) differ : 0.000321 and 0.000321
+Values at index (4,7,448) differ : 0.000323 and 0.000323
+Values at index (4,8,447) differ : 0.000330 and 0.000330
+Values at index (4,11,408) differ : 0.000332 and 0.000332
+Values at index (4,11,409) differ : 0.000340 and 0.000340
+Values at index (5,9,205) differ : 0.000334 and 0.000334
+Values at index (5,384,492) differ : 0.000334 and 0.000334
+Values at index (19,361,17) differ : 0.000338 and 0.000338
+Values at index (20,361,17) differ : 0.000343 and 0.000343
+Values at index (22,115,371) differ : 0.000340 and 0.000340
+Values at index (31,446,361) differ : 0.000341 and 0.000341
+Values at index (36,239,443) differ : 0.000340 and 0.000340
+Values at index (45,139,372) differ : 0.000341 and 0.000341
+Values at index (46,130,80) differ : 0.000349 and 0.000349
+Values at index (46,139,372) differ : 0.000346 and 0.000346
+Values at index (92,245,186) differ : 0.000337 and 0.000337
+Values at index (123,137,97) differ : 0.000348 and 0.000348
+Values at index (195,134,63) differ : 0.000344 and 0.000344
+Values at index (195,134,64) differ : 0.000345 and 0.000345
+[Test] Max Error : 9.932127e-12 @ (195,134,64)
+[Test] RMS Error : 7.976713e-12

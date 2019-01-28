@@ -1,0 +1,338 @@
++ for regCnt in 32 64
++ for f in test-stream-z-overlap-2.cu test-stream-z-y-opt.cu test-stream-z-overlap-4-opt.cu test-stream-z-overlap-2-32x32.cu test-stream-z-overlap-4-opt-32x16.cu test-stream-z-y-opt-32x16.cu
++ echo Running test-stream-z-overlap-2.cu for regCnt 32
+Running test-stream-z-overlap-2.cu for regCnt 32
++ nvcc -O3 -maxrregcount=32 -ccbin=g++ -std=c++11 -Xcompiler '-fPIC -fopenmp -O3 -fno-strict-aliasing' --use_fast_math -Xptxas '-v -dlcm=cg' -gencode arch=compute_60,code=sm_60 ../../cuda_header.cu ../j3d7pt_gold.cpp j3d7pt.driver.cpp test-stream-z-overlap-2.cu -o test
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z28__kernel___forma_kernel__0__PfiiiiiiS_' for 'sm_60'
+ptxas info    : Function properties for _Z28__kernel___forma_kernel__0__PfiiiiiiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, 360 bytes cmem[0], 24 bytes cmem[2]
++ nvprof --print-gpu-trace ./test
+Values at index (4,4,4) differ : -4.537350 and -4.537350
+Values at index (4,4,70) differ : -7.461147 and -7.461148
+Values at index (4,4,91) differ : -7.092897 and -7.092896
+Values at index (4,6,130) differ : 9.657545 and 9.657547
+Values at index (4,23,317) differ : 7.704049 and 7.704047
+Values at index (4,35,250) differ : 10.089653 and 10.089656
+Values at index (122,138,314) differ : 13.338741 and 13.338737
+[Test] Max Error : 3.814697e-06 @ (122,138,314)
+[Test] RMS Error : 3.884796e-07
+[Test] Elapsed Time (average of 2 runs) : 0.000000e+00 (ms)
++ ./time.awk
+
+-------------------- Forma Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  56.003
+Untiled MemCopy Time from Host to Device (ms) :  41.489
+Forma Overtile Run Time (ms) :  9.6785
++ for f in test-stream-z-overlap-2.cu test-stream-z-y-opt.cu test-stream-z-overlap-4-opt.cu test-stream-z-overlap-2-32x32.cu test-stream-z-overlap-4-opt-32x16.cu test-stream-z-y-opt-32x16.cu
++ echo Running test-stream-z-y-opt.cu for regCnt 32
+Running test-stream-z-y-opt.cu for regCnt 32
++ nvcc -O3 -maxrregcount=32 -ccbin=g++ -std=c++11 -Xcompiler '-fPIC -fopenmp -O3 -fno-strict-aliasing' --use_fast_math -Xptxas '-v -dlcm=cg' -gencode arch=compute_60,code=sm_60 ../../cuda_header.cu ../j3d7pt_gold.cpp j3d7pt.driver.cpp test-stream-z-y-opt.cu -o test
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z28__kernel___forma_kernel__0__PfiiiiiiS_' for 'sm_60'
+ptxas info    : Function properties for _Z28__kernel___forma_kernel__0__PfiiiiiiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 16384 bytes smem, 360 bytes cmem[0], 24 bytes cmem[2]
++ nvprof --print-gpu-trace ./test
+Values at index (4,4,4) differ : -4.537350 and -4.537350
+Values at index (4,4,70) differ : -7.461147 and -7.461148
+Values at index (4,4,91) differ : -7.092897 and -7.092896
+Values at index (4,6,130) differ : 9.657545 and 9.657547
+Values at index (4,23,317) differ : 7.704049 and 7.704047
+Values at index (4,35,250) differ : 10.089653 and 10.089656
+Values at index (122,138,314) differ : 13.338741 and 13.338737
+[Test] Max Error : 3.814697e-06 @ (122,138,314)
+[Test] RMS Error : 3.884796e-07
+[Test] Elapsed Time (average of 2 runs) : 0.000000e+00 (ms)
++ ./time.awk
+
+-------------------- Forma Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  59.507
+Untiled MemCopy Time from Host to Device (ms) :  41.532
+Forma Overtile Run Time (ms) :  19.713
++ for f in test-stream-z-overlap-2.cu test-stream-z-y-opt.cu test-stream-z-overlap-4-opt.cu test-stream-z-overlap-2-32x32.cu test-stream-z-overlap-4-opt-32x16.cu test-stream-z-y-opt-32x16.cu
++ echo Running test-stream-z-overlap-4-opt.cu for regCnt 32
+Running test-stream-z-overlap-4-opt.cu for regCnt 32
++ nvcc -O3 -maxrregcount=32 -ccbin=g++ -std=c++11 -Xcompiler '-fPIC -fopenmp -O3 -fno-strict-aliasing' --use_fast_math -Xptxas '-v -dlcm=cg' -gencode arch=compute_60,code=sm_60 ../../cuda_header.cu ../j3d7pt_gold.cpp j3d7pt.driver.cpp test-stream-z-overlap-4-opt.cu -o test
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z28__kernel___forma_kernel__0__PfiiiiiiS_' for 'sm_60'
+ptxas info    : Function properties for _Z28__kernel___forma_kernel__0__PfiiiiiiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, 16384 bytes smem, 360 bytes cmem[0], 24 bytes cmem[2]
++ nvprof --print-gpu-trace ./test
+Values at index (4,4,4) differ : -4.537350 and -4.537350
+Values at index (4,4,70) differ : -7.461147 and -7.461148
+Values at index (4,4,91) differ : -7.092897 and -7.092896
+Values at index (4,6,130) differ : 9.657545 and 9.657547
+Values at index (4,23,317) differ : 7.704049 and 7.704047
+Values at index (4,35,250) differ : 10.089653 and 10.089656
+Values at index (122,138,314) differ : 13.338741 and 13.338737
+[Test] Max Error : 3.814697e-06 @ (122,138,314)
+[Test] RMS Error : 3.884796e-07
+[Test] Elapsed Time (average of 2 runs) : 0.000000e+00 (ms)
++ ./time.awk
+
+-------------------- Forma Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  59.743
+Untiled MemCopy Time from Host to Device (ms) :  41.013
+Forma Overtile Run Time (ms) :  5.5622
++ for f in test-stream-z-overlap-2.cu test-stream-z-y-opt.cu test-stream-z-overlap-4-opt.cu test-stream-z-overlap-2-32x32.cu test-stream-z-overlap-4-opt-32x16.cu test-stream-z-y-opt-32x16.cu
++ echo Running test-stream-z-overlap-2-32x32.cu for regCnt 32
+Running test-stream-z-overlap-2-32x32.cu for regCnt 32
++ nvcc -O3 -maxrregcount=32 -ccbin=g++ -std=c++11 -Xcompiler '-fPIC -fopenmp -O3 -fno-strict-aliasing' --use_fast_math -Xptxas '-v -dlcm=cg' -gencode arch=compute_60,code=sm_60 ../../cuda_header.cu ../j3d7pt_gold.cpp j3d7pt.driver.cpp test-stream-z-overlap-2-32x32.cu -o test
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z28__kernel___forma_kernel__0__PfiiiiiiS_' for 'sm_60'
+ptxas info    : Function properties for _Z28__kernel___forma_kernel__0__PfiiiiiiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, 360 bytes cmem[0], 24 bytes cmem[2]
++ nvprof --print-gpu-trace ./test
+Values at index (4,4,4) differ : -4.537350 and -4.537350
+Values at index (4,4,70) differ : -7.461147 and -7.461148
+Values at index (4,4,91) differ : -7.092897 and -7.092896
+Values at index (4,6,130) differ : 9.657545 and 9.657547
+Values at index (4,23,317) differ : 7.704049 and 7.704047
+Values at index (4,35,250) differ : 10.089653 and 10.089656
+Values at index (122,138,314) differ : 13.338741 and 13.338737
+[Test] Max Error : 3.814697e-06 @ (122,138,314)
+[Test] RMS Error : 3.884796e-07
+[Test] Elapsed Time (average of 2 runs) : 0.000000e+00 (ms)
++ ./time.awk
+
+-------------------- Forma Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  60.046
+Untiled MemCopy Time from Host to Device (ms) :  41.493
+Forma Overtile Run Time (ms) :  10.5079
++ for f in test-stream-z-overlap-2.cu test-stream-z-y-opt.cu test-stream-z-overlap-4-opt.cu test-stream-z-overlap-2-32x32.cu test-stream-z-overlap-4-opt-32x16.cu test-stream-z-y-opt-32x16.cu
++ echo Running test-stream-z-overlap-4-opt-32x16.cu for regCnt 32
+Running test-stream-z-overlap-4-opt-32x16.cu for regCnt 32
++ nvcc -O3 -maxrregcount=32 -ccbin=g++ -std=c++11 -Xcompiler '-fPIC -fopenmp -O3 -fno-strict-aliasing' --use_fast_math -Xptxas '-v -dlcm=cg' -gencode arch=compute_60,code=sm_60 ../../cuda_header.cu ../j3d7pt_gold.cpp j3d7pt.driver.cpp test-stream-z-overlap-4-opt-32x16.cu -o test
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z28__kernel___forma_kernel__0__PfiiiiiiS_' for 'sm_60'
+ptxas info    : Function properties for _Z28__kernel___forma_kernel__0__PfiiiiiiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, 8192 bytes smem, 360 bytes cmem[0], 24 bytes cmem[2]
++ nvprof --print-gpu-trace ./test
+Values at index (4,4,4) differ : -4.537350 and -4.537350
+Values at index (4,4,70) differ : -7.461147 and -7.461148
+Values at index (4,4,91) differ : -7.092897 and -7.092896
+Values at index (4,6,130) differ : 9.657545 and 9.657547
+Values at index (4,23,317) differ : 7.704049 and 7.704047
+Values at index (4,35,250) differ : 10.089653 and 10.089656
+Values at index (122,138,314) differ : 13.338741 and 13.338737
+[Test] Max Error : 3.814697e-06 @ (122,138,314)
+[Test] RMS Error : 3.884796e-07
+[Test] Elapsed Time (average of 2 runs) : 0.000000e+00 (ms)
++ ./time.awk
+
+-------------------- Forma Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  58.278
+Untiled MemCopy Time from Host to Device (ms) :  41.319
+Forma Overtile Run Time (ms) :  6.8794
++ for f in test-stream-z-overlap-2.cu test-stream-z-y-opt.cu test-stream-z-overlap-4-opt.cu test-stream-z-overlap-2-32x32.cu test-stream-z-overlap-4-opt-32x16.cu test-stream-z-y-opt-32x16.cu
++ echo Running test-stream-z-y-opt-32x16.cu for regCnt 32
+Running test-stream-z-y-opt-32x16.cu for regCnt 32
++ nvcc -O3 -maxrregcount=32 -ccbin=g++ -std=c++11 -Xcompiler '-fPIC -fopenmp -O3 -fno-strict-aliasing' --use_fast_math -Xptxas '-v -dlcm=cg' -gencode arch=compute_60,code=sm_60 ../../cuda_header.cu ../j3d7pt_gold.cpp j3d7pt.driver.cpp test-stream-z-y-opt-32x16.cu -o test
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z28__kernel___forma_kernel__0__PfiiiiiiS_' for 'sm_60'
+ptxas info    : Function properties for _Z28__kernel___forma_kernel__0__PfiiiiiiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 8192 bytes smem, 360 bytes cmem[0], 24 bytes cmem[2]
++ nvprof --print-gpu-trace ./test
+Values at index (4,4,4) differ : -4.537350 and -4.537350
+Values at index (4,4,70) differ : -7.461147 and -7.461148
+Values at index (4,4,91) differ : -7.092897 and -7.092896
+Values at index (4,6,130) differ : 9.657545 and 9.657547
+Values at index (4,23,317) differ : 7.704049 and 7.704047
+Values at index (4,35,250) differ : 10.089653 and 10.089656
+Values at index (122,138,314) differ : 13.338741 and 13.338737
+[Test] Max Error : 3.814697e-06 @ (122,138,314)
+[Test] RMS Error : 3.884796e-07
+[Test] Elapsed Time (average of 2 runs) : 0.000000e+00 (ms)
++ ./time.awk
+
+-------------------- Forma Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  59.703
+Untiled MemCopy Time from Host to Device (ms) :  41.515
+Forma Overtile Run Time (ms) :  35.594
++ for regCnt in 32 64
++ for f in test-stream-z-overlap-2.cu test-stream-z-y-opt.cu test-stream-z-overlap-4-opt.cu test-stream-z-overlap-2-32x32.cu test-stream-z-overlap-4-opt-32x16.cu test-stream-z-y-opt-32x16.cu
++ echo Running test-stream-z-overlap-2.cu for regCnt 64
+Running test-stream-z-overlap-2.cu for regCnt 64
++ nvcc -O3 -maxrregcount=64 -ccbin=g++ -std=c++11 -Xcompiler '-fPIC -fopenmp -O3 -fno-strict-aliasing' --use_fast_math -Xptxas '-v -dlcm=cg' -gencode arch=compute_60,code=sm_60 ../../cuda_header.cu ../j3d7pt_gold.cpp j3d7pt.driver.cpp test-stream-z-overlap-2.cu -o test
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z28__kernel___forma_kernel__0__PfiiiiiiS_' for 'sm_60'
+ptxas info    : Function properties for _Z28__kernel___forma_kernel__0__PfiiiiiiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 360 bytes cmem[0], 24 bytes cmem[2]
++ nvprof --print-gpu-trace ./test
+Values at index (4,4,4) differ : -4.537350 and -4.537350
+Values at index (4,4,70) differ : -7.461147 and -7.461148
+Values at index (4,4,91) differ : -7.092897 and -7.092896
+Values at index (4,6,130) differ : 9.657545 and 9.657547
+Values at index (4,23,317) differ : 7.704049 and 7.704047
+Values at index (4,35,250) differ : 10.089653 and 10.089656
+Values at index (122,138,314) differ : 13.338741 and 13.338737
+[Test] Max Error : 3.814697e-06 @ (122,138,314)
+[Test] RMS Error : 3.884796e-07
+[Test] Elapsed Time (average of 2 runs) : 0.000000e+00 (ms)
++ ./time.awk
+
+-------------------- Forma Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  59.649
+Untiled MemCopy Time from Host to Device (ms) :  41.429
+Forma Overtile Run Time (ms) :  9.6859
++ for f in test-stream-z-overlap-2.cu test-stream-z-y-opt.cu test-stream-z-overlap-4-opt.cu test-stream-z-overlap-2-32x32.cu test-stream-z-overlap-4-opt-32x16.cu test-stream-z-y-opt-32x16.cu
++ echo Running test-stream-z-y-opt.cu for regCnt 64
+Running test-stream-z-y-opt.cu for regCnt 64
++ nvcc -O3 -maxrregcount=64 -ccbin=g++ -std=c++11 -Xcompiler '-fPIC -fopenmp -O3 -fno-strict-aliasing' --use_fast_math -Xptxas '-v -dlcm=cg' -gencode arch=compute_60,code=sm_60 ../../cuda_header.cu ../j3d7pt_gold.cpp j3d7pt.driver.cpp test-stream-z-y-opt.cu -o test
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z28__kernel___forma_kernel__0__PfiiiiiiS_' for 'sm_60'
+ptxas info    : Function properties for _Z28__kernel___forma_kernel__0__PfiiiiiiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, 16384 bytes smem, 360 bytes cmem[0], 24 bytes cmem[2]
++ nvprof --print-gpu-trace ./test
+Values at index (4,4,4) differ : -4.537350 and -4.537350
+Values at index (4,4,70) differ : -7.461147 and -7.461148
+Values at index (4,4,91) differ : -7.092897 and -7.092896
+Values at index (4,6,130) differ : 9.657545 and 9.657547
+Values at index (4,23,317) differ : 7.704049 and 7.704047
+Values at index (4,35,250) differ : 10.089653 and 10.089656
+Values at index (122,138,314) differ : 13.338741 and 13.338737
+[Test] Max Error : 3.814697e-06 @ (122,138,314)
+[Test] RMS Error : 3.884796e-07
+[Test] Elapsed Time (average of 2 runs) : 0.000000e+00 (ms)
++ ./time.awk
+
+-------------------- Forma Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  62
+Untiled MemCopy Time from Host to Device (ms) :  41.427
+Forma Overtile Run Time (ms) :  21.144
++ for f in test-stream-z-overlap-2.cu test-stream-z-y-opt.cu test-stream-z-overlap-4-opt.cu test-stream-z-overlap-2-32x32.cu test-stream-z-overlap-4-opt-32x16.cu test-stream-z-y-opt-32x16.cu
++ echo Running test-stream-z-overlap-4-opt.cu for regCnt 64
+Running test-stream-z-overlap-4-opt.cu for regCnt 64
++ nvcc -O3 -maxrregcount=64 -ccbin=g++ -std=c++11 -Xcompiler '-fPIC -fopenmp -O3 -fno-strict-aliasing' --use_fast_math -Xptxas '-v -dlcm=cg' -gencode arch=compute_60,code=sm_60 ../../cuda_header.cu ../j3d7pt_gold.cpp j3d7pt.driver.cpp test-stream-z-overlap-4-opt.cu -o test
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z28__kernel___forma_kernel__0__PfiiiiiiS_' for 'sm_60'
+ptxas info    : Function properties for _Z28__kernel___forma_kernel__0__PfiiiiiiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, 16384 bytes smem, 360 bytes cmem[0], 24 bytes cmem[2]
++ nvprof --print-gpu-trace ./test
+Values at index (4,4,4) differ : -4.537350 and -4.537350
+Values at index (4,4,70) differ : -7.461147 and -7.461148
+Values at index (4,4,91) differ : -7.092897 and -7.092896
+Values at index (4,6,130) differ : 9.657545 and 9.657547
+Values at index (4,23,317) differ : 7.704049 and 7.704047
+Values at index (4,35,250) differ : 10.089653 and 10.089656
+Values at index (122,138,314) differ : 13.338741 and 13.338737
+[Test] Max Error : 3.814697e-06 @ (122,138,314)
+[Test] RMS Error : 3.884796e-07
+[Test] Elapsed Time (average of 2 runs) : 0.000000e+00 (ms)
++ ./time.awk
+
+-------------------- Forma Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  59.619
+Untiled MemCopy Time from Host to Device (ms) :  41.521
+Forma Overtile Run Time (ms) :  5.8935
++ for f in test-stream-z-overlap-2.cu test-stream-z-y-opt.cu test-stream-z-overlap-4-opt.cu test-stream-z-overlap-2-32x32.cu test-stream-z-overlap-4-opt-32x16.cu test-stream-z-y-opt-32x16.cu
++ echo Running test-stream-z-overlap-2-32x32.cu for regCnt 64
+Running test-stream-z-overlap-2-32x32.cu for regCnt 64
++ nvcc -O3 -maxrregcount=64 -ccbin=g++ -std=c++11 -Xcompiler '-fPIC -fopenmp -O3 -fno-strict-aliasing' --use_fast_math -Xptxas '-v -dlcm=cg' -gencode arch=compute_60,code=sm_60 ../../cuda_header.cu ../j3d7pt_gold.cpp j3d7pt.driver.cpp test-stream-z-overlap-2-32x32.cu -o test
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z28__kernel___forma_kernel__0__PfiiiiiiS_' for 'sm_60'
+ptxas info    : Function properties for _Z28__kernel___forma_kernel__0__PfiiiiiiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 360 bytes cmem[0], 24 bytes cmem[2]
++ nvprof --print-gpu-trace ./test
+Values at index (4,4,4) differ : -4.537350 and -4.537350
+Values at index (4,4,70) differ : -7.461147 and -7.461148
+Values at index (4,4,91) differ : -7.092897 and -7.092896
+Values at index (4,6,130) differ : 9.657545 and 9.657547
+Values at index (4,23,317) differ : 7.704049 and 7.704047
+Values at index (4,35,250) differ : 10.089653 and 10.089656
+Values at index (122,138,314) differ : 13.338741 and 13.338737
+[Test] Max Error : 3.814697e-06 @ (122,138,314)
+[Test] RMS Error : 3.884796e-07
+[Test] Elapsed Time (average of 2 runs) : 0.000000e+00 (ms)
++ ./time.awk
+
+-------------------- Forma Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  59.639
+Untiled MemCopy Time from Host to Device (ms) :  41.448
+Forma Overtile Run Time (ms) :  10.5506
++ for f in test-stream-z-overlap-2.cu test-stream-z-y-opt.cu test-stream-z-overlap-4-opt.cu test-stream-z-overlap-2-32x32.cu test-stream-z-overlap-4-opt-32x16.cu test-stream-z-y-opt-32x16.cu
++ echo Running test-stream-z-overlap-4-opt-32x16.cu for regCnt 64
+Running test-stream-z-overlap-4-opt-32x16.cu for regCnt 64
++ nvcc -O3 -maxrregcount=64 -ccbin=g++ -std=c++11 -Xcompiler '-fPIC -fopenmp -O3 -fno-strict-aliasing' --use_fast_math -Xptxas '-v -dlcm=cg' -gencode arch=compute_60,code=sm_60 ../../cuda_header.cu ../j3d7pt_gold.cpp j3d7pt.driver.cpp test-stream-z-overlap-4-opt-32x16.cu -o test
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z28__kernel___forma_kernel__0__PfiiiiiiS_' for 'sm_60'
+ptxas info    : Function properties for _Z28__kernel___forma_kernel__0__PfiiiiiiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, 8192 bytes smem, 360 bytes cmem[0], 24 bytes cmem[2]
++ nvprof --print-gpu-trace ./test
+Values at index (4,4,4) differ : -4.537350 and -4.537350
+Values at index (4,4,70) differ : -7.461147 and -7.461148
+Values at index (4,4,91) differ : -7.092897 and -7.092896
+Values at index (4,6,130) differ : 9.657545 and 9.657547
+Values at index (4,23,317) differ : 7.704049 and 7.704047
+Values at index (4,35,250) differ : 10.089653 and 10.089656
+Values at index (122,138,314) differ : 13.338741 and 13.338737
+[Test] Max Error : 3.814697e-06 @ (122,138,314)
+[Test] RMS Error : 3.884796e-07
+[Test] Elapsed Time (average of 2 runs) : 0.000000e+00 (ms)
++ ./time.awk
+
+-------------------- Forma Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  73.093
+Untiled MemCopy Time from Host to Device (ms) :  41.32
+Forma Overtile Run Time (ms) :  6.8661
++ for f in test-stream-z-overlap-2.cu test-stream-z-y-opt.cu test-stream-z-overlap-4-opt.cu test-stream-z-overlap-2-32x32.cu test-stream-z-overlap-4-opt-32x16.cu test-stream-z-y-opt-32x16.cu
++ echo Running test-stream-z-y-opt-32x16.cu for regCnt 64
+Running test-stream-z-y-opt-32x16.cu for regCnt 64
++ nvcc -O3 -maxrregcount=64 -ccbin=g++ -std=c++11 -Xcompiler '-fPIC -fopenmp -O3 -fno-strict-aliasing' --use_fast_math -Xptxas '-v -dlcm=cg' -gencode arch=compute_60,code=sm_60 ../../cuda_header.cu ../j3d7pt_gold.cpp j3d7pt.driver.cpp test-stream-z-y-opt-32x16.cu -o test
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z28__kernel___forma_kernel__0__PfiiiiiiS_' for 'sm_60'
+ptxas info    : Function properties for _Z28__kernel___forma_kernel__0__PfiiiiiiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, 8192 bytes smem, 360 bytes cmem[0], 24 bytes cmem[2]
++ nvprof --print-gpu-trace ./test
+Values at index (4,4,4) differ : -4.537350 and -4.537350
+Values at index (4,4,70) differ : -7.461147 and -7.461148
+Values at index (4,4,91) differ : -7.092897 and -7.092896
+Values at index (4,6,130) differ : 9.657545 and 9.657547
+Values at index (4,23,317) differ : 7.704049 and 7.704047
+Values at index (4,35,250) differ : 10.089653 and 10.089656
+Values at index (122,138,314) differ : 13.338741 and 13.338737
+[Test] Max Error : 3.814697e-06 @ (122,138,314)
+[Test] RMS Error : 3.884796e-07
+[Test] Elapsed Time (average of 2 runs) : 0.000000e+00 (ms)
++ ./time.awk
+
+-------------------- Forma Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  58.904
+Untiled MemCopy Time from Host to Device (ms) :  41.311
+Forma Overtile Run Time (ms) :  31.464

@@ -1,0 +1,13 @@
+==16597== NVPROF is profiling process 16597, command: ./test
+==16597== Profiling application: ./test
+==16597== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+364.53ms  58.904ms                    -               -         -         -         -  512.00MB  8.4884GB/s    Pageable      Device  Quadro GP100 (0         1         7  [CUDA memcpy HtoD]
+424.13ms  31.464ms             (22 1 1)       (32 16 1)        40  8.0000KB        0B         -           -           -           -  Quadro GP100 (0         1         7  __kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*) [113]
+455.60ms  41.311ms                    -               -         -         -         -  512.00MB  12.103GB/s      Device    Pageable  Quadro GP100 (0         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

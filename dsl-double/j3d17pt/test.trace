@@ -1,0 +1,9 @@
+==29674== NVPROF is profiling process 29674, command: ./test
+==29674== Profiling application: ./test
+==29674== Profiling result:
+"Start","Duration","Grid X","Grid Y","Grid Z","Block X","Block Y","Block Z","Registers Per Thread","Static SMem","Dynamic SMem","Size","Throughput","Device","Context","Stream","Name"
+ms,ms,,,,,,,,KB,B,MB,GB/s,,,,
+196.836301,81.699614,,,,,,,,,,536.870912,6.571278,"Tesla K20c (0)","1","7","[CUDA memcpy HtoD]"
+279.198227,36.449373,19,19,1,32,32,1,32,0.000000,2.457600e+04,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*) [109]"
+315.650768,36.395676,19,19,1,32,32,1,32,0.000000,2.457600e+04,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*) [120]"
+352.050380,81.716607,,,,,,,,,,536.870912,6.569912,"Tesla K20c (0)","1","7","[CUDA memcpy DtoH]"

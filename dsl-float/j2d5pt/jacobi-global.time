@@ -1,0 +1,33 @@
+==30857== NVPROF is profiling process 30857, command: ./jacobi-global
+==30857== Profiling application: ./jacobi-global
+==30857== Profiling result:
+"Time(%)","Time","Calls","Avg","Min","Max","Name"
+%,ms,,ms,ms,ms,
+33.740559,122.374697,3,40.791565,40.767288,40.838841,"[CUDA memcpy HtoD]"
+33.735848,122.357608,3,40.785869,40.767352,40.810424,"[CUDA memcpy DtoH]"
+17.615524,63.890299,3,21.296766,21.296105,21.297161,"__kernel___forma_kernel__0__(float*, int, int, float*, float*, float*, int, int, float*)"
+3.763701,13.650686,3,4.550228,4.543903,4.557695,"__kernel___forma_kernel__4__(float*, int, int, int, int, float*)"
+3.751878,13.607806,3,4.535935,4.530271,4.539456,"__kernel___forma_kernel__3__(float*, int, int, int, int, float*)"
+3.704384,13.435546,3,4.478515,4.477502,4.479102,"__kernel___forma_kernel__1__(float*, int, int, int, int, float*)"
+3.688106,13.376506,3,4.458835,4.456222,4.460446,"__kernel___forma_kernel__2__(float*, int, int, int, int, float*)"
+
+==30857== API calls:
+"Time(%)","Time","Calls","Avg","Min","Max","Name"
+%,ms,,ms,ms,ms,
+78.327245,362.891928,6,60.481988,40.726794,80.209869,"cudaMemcpy"
+21.028898,97.427367,15,6.495157,0.181830,94.344173,"cudaMalloc"
+0.529912,2.455093,15,0.163672,0.155911,0.184605,"cudaFree"
+0.040144,0.185987,15,0.012399,6.678000e-03,0.035731,"cudaLaunch"
+0.039936,0.185025,83,2.229000e-03,1.950000e-04,0.075072,"cuDeviceGetAttribute"
+0.006334,0.029345,99,2.960000e-04,1.880000e-04,5.133000e-03,"cudaSetupArgument"
+0.005021,0.023262,1,0.023262,0.023262,0.023262,"cuDeviceTotalMem"
+0.004273,0.019798,6,3.299000e-03,1.868000e-03,5.211000e-03,"cudaPointerGetAttributes"
+0.004249,0.019687,1,0.019687,0.019687,0.019687,"cuDeviceGetName"
+0.003726,0.017261,3,5.753000e-03,4.530000e-03,7.851000e-03,"cudaFuncGetAttributes"
+0.002815,0.013044,15,8.690000e-04,4.420000e-04,3.415000e-03,"cudaDeviceGetAttribute"
+0.002640,0.012231,36,3.390000e-04,1.990000e-04,9.710000e-04,"cudaGetLastError"
+0.001881,8.714000e-03,3,2.904000e-03,2.035000e-03,4.555000e-03,"cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags"
+0.001126,5.219000e-03,15,3.470000e-04,2.440000e-04,9.610000e-04,"cudaConfigureCall"
+0.001099,5.091000e-03,3,1.697000e-03,1.398000e-03,2.138000e-03,"cudaGetDevice"
+0.000352,1.630000e-03,2,8.150000e-04,2.260000e-04,1.404000e-03,"cuDeviceGet"
+0.000350,1.621000e-03,2,8.100000e-04,3.640000e-04,1.257000e-03,"cuDeviceGetCount"

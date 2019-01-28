@@ -1,0 +1,9 @@
+==14855== NVPROF is profiling process 14855, command: ./jacobi-untiled
+==14855== Profiling application: ./jacobi-untiled
+==14855== Profiling result:
+No kernels were profiled.
+
+==14855== API calls:
+No API activities were profiled.
+==14855== Warning: Some profiling data are not recorded. Make sure cudaDeviceReset() is called before application exit to flush profile data.
+======== Error: Application received signal 2

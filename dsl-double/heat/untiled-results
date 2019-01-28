@@ -1,0 +1,16 @@
+==315== NVPROF is profiling process 315, command: ./test
+==315== Profiling application: ./test
+==315== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+319.30ms  116.18ms                    -               -         -         -         -  1.0000GB  8.6073GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+438.93ms  5.6967ms         (32 128 128)        (16 4 4)        24        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(double*, int, int, int, double*) [121]
+444.63ms  5.6974ms         (32 128 128)        (16 4 4)        24        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(double*, int, int, int, double*) [128]
+450.33ms  5.6785ms         (32 128 128)        (16 4 4)        24        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(double*, int, int, int, double*) [135]
+456.01ms  5.7004ms         (32 128 128)        (16 4 4)        24        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(double*, int, int, int, double*) [142]
+461.72ms  82.906ms                    -               -         -         -         -  1.0000GB  12.062GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

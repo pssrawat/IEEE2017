@@ -1,0 +1,6 @@
+stencil gaussian(vector#2 float X){
+	return (2 * X@[-2,-2] + 4 * X@[-2,-1] + 5 * X@[-2,0] + 4 * X@[-2,1] + 2 * X@[-2,2] + 4 * X@[-1,-2] + 9 * X@[-1,-1] + 12 * X@[-1,0] + 9 * X@[-1,1] + 4 * X@[-1,2] + 5 * X@[0,-2] + 12 * X@[0,-1] + 15 * X@[0,0] + 12 * X@[0,1] + 5 * X@[0,2] + 4 * X@[1,-2] + 9 * X@[1,-1] + 12 * X@[1,0] + 9 * X@[1,1] + 4 * X@[1,2] + 2 * X@[2,-2] + 4 * X@[2,-1] + 5 * X@[2,0] + 4 * X@[2,1] + 2 * X@[2,2] ) / 159;
+}
+parameter N,M;
+vector#2 float input[N,M];
+return gaussian(gaussian(gaussian(gaussian(input))));

@@ -1,0 +1,14 @@
+==14449== NVPROF is profiling process 14449, command: ./test
+==14449== Profiling application: ./test
+==14449== Profiling result:
+"Start","Duration","Grid X","Grid Y","Grid Z","Block X","Block Y","Block Z","Registers Per Thread","Static SMem","Dynamic SMem","Size","Throughput","Device","Context","Stream","Name"
+s,ms,,,,,,,,KB,B,MB,GB/s,,,,
+0.172984,89.349248,,,,,,,,,,512.000000,5.596018,"GeForce GTX TITAN (0)","1","7","[CUDA memcpy HtoD]"
+0.262674,81.311234,32,32,1,32,32,1,32,0.000000,1.638400e+04,,,"GeForce GTX TITAN (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*) [107]"
+0.343987,89.701220,,,,,,,,,,512.000000,5.574060,"GeForce GTX TITAN (0)","1","7","[CUDA memcpy DtoH]"
+3.211279,89.118686,,,,,,,,,,512.000000,5.610496,"GeForce GTX TITAN (0)","1","7","[CUDA memcpy HtoD]"
+3.300724,80.267381,32,32,1,32,32,1,32,0.000000,1.638400e+04,,,"GeForce GTX TITAN (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*) [131]"
+3.380995,89.657604,,,,,,,,,,512.000000,5.576772,"GeForce GTX TITAN (0)","1","7","[CUDA memcpy DtoH]"
+3.495125,89.070109,,,,,,,,,,512.000000,5.613555,"GeForce GTX TITAN (0)","1","7","[CUDA memcpy HtoD]"
+3.584518,80.299445,32,32,1,32,32,1,32,0.000000,1.638400e+04,,,"GeForce GTX TITAN (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*) [155]"
+3.664820,89.703397,,,,,,,,,,512.000000,5.573925,"GeForce GTX TITAN (0)","1","7","[CUDA memcpy DtoH]"

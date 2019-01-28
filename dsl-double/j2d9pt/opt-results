@@ -1,0 +1,13 @@
+==178866== NVPROF is profiling process 178866, command: ./test
+==178866== Profiling application: ./test
+==178866== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+327.36ms  59.116ms                    -               -         -         -         -  512.00MB  8.4579GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+387.11ms  7.4056ms            (69 32 1)       (128 1 1)        60        0B  4.0000KB         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(double*, int, int, int, int, double*) [117]
+394.52ms  69.406ms                    -               -         -         -         -  512.00MB  7.2040GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

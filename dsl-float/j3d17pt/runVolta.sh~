@@ -1,0 +1,5 @@
+
+nvcc -O3 -maxrregcount=32 -ccbin=g++ -std=c++11 -Xcompiler "-fPIC -fopenmp -O3 -fno-strict-aliasing" --use_fast_math -Xptxas "-v -dlcm=cg" -gencode arch=compute_61,code=sm_61 ~/cuda_header.cu ../j3d17pt_gold.cpp j3d17pt.driver.cpp test-stream-z-overlap-2.cu -o test
+nvprof --print-gpu-trace ./test 2> forma-ot-results
+
+./time.awk

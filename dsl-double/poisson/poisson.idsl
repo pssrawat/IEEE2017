@@ -1,0 +1,18 @@
+stencil possion (in, out1) {
+  out += 2.666f*in[0,0,0] - 0.166f*(in[0,-1,0]+in[0,1,0]+in[0,0,1]+in[0,0,-1]) - 0.0833f*(in[0,-1,-1]+in[0,1,-1]+in[0,-1,1]+in[0,1,1]);
+  out += -0.166f*(in[-1,0,0]) - 0.0833f*(in[-1,-1,0]+in[-1,1,0]+in[-1,0,-1]+in[-1,0,1]);
+  out += -0.166f*(in[1,0,0]) - 0.0833f*(in[1,-1,0]+in[1,1,0]+in[1,0,-1]+in[1,0,1]);
+
+  out1 += 2.666f*out[0,0,0] - 0.166f*(out[0,-1,0]+out[0,1,0]+out[0,0,1]+out[0,0,-1]) - 0.0833f*(out[0,-1,-1]+out[0,1,-1]+out[0,-1,1]+out[0,1,1]);
+  out1 += -0.166f*(out[-1,0,0]) - 0.0833f*(out[-1,-1,0]+out[-1,1,0]+out[-1,0,-1]+out[-1,0,1]);
+  out1 += -0.166f*(out[1,0,0]) - 0.0833f*(out[1,-1,0]+out[1,1,0]+out[1,0,-1]+out[1,0,1]); 
+}
+
+parameter L,M,N;
+float in[L,M,N];
+float out1[L,M,N];
+float out2[L,M,N];
+float out[L,M,N];
+temporary out, out1, out2;
+possion (in, out1);
+out2 = possion (out1, out2);

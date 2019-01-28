@@ -1,0 +1,16 @@
+==190418== NVPROF is profiling process 190418, command: ./test
+==190418== Profiling application: ./test
+==190418== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+322.36ms  116.90ms                    -               -         -         -         -  1.0000GB  8.5540GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+442.49ms  10.033ms         (32 128 128)        (16 4 4)        32        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(double*, int, int, int, double*) [121]
+452.53ms  9.6087ms         (32 128 128)        (16 4 4)        32        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(double*, int, int, int, double*) [128]
+462.14ms  9.5693ms         (32 128 128)        (16 4 4)        32        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(double*, int, int, int, double*) [135]
+471.71ms  9.5727ms         (32 128 128)        (16 4 4)        32        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(double*, int, int, int, double*) [142]
+481.29ms  82.914ms                    -               -         -         -         -  1.0000GB  12.061GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

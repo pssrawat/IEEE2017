@@ -1,0 +1,6 @@
+stencil j3d(vector#3 float A) {
+  return 0.161f * A@[0,0,1] + 0.162f * A@[0,0,-1] + 0.163f * A@[0,1,0] + 0.164f * A@[0,-1,0] + 0.165f * A@[1,0,0] + 0.166f * A@[-1,0,0] - 1.67f * A;
+}
+parameter L,M,N;
+vector#3 float input[L,M,N];
+return j3d(j3d(j3d(j3d(input))));

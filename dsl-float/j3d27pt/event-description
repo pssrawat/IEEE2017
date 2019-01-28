@@ -1,0 +1,289 @@
+Available Events:
+                            Name   Description
+Device 0 (Tesla K20c):
+	Domain domain_a:
+       tex0_cache_sector_queries:  Number of texture cache 0 requests. This increments by 1 for each 32-byte access.
+
+       tex1_cache_sector_queries:  Number of texture cache 1 requests. This increments by 1 for each 32-byte access.
+
+       tex2_cache_sector_queries:  Number of texture cache 2 requests. This increments by 1 for each 32-byte access. Value will be 0 for devices that contain only 2 texture units.
+
+       tex3_cache_sector_queries:  Number of texture cache 3 requests. This increments by 1 for each 32-byte access. Value will be 0 for devices that contain only 2 texture units.
+
+        tex0_cache_sector_misses:  Number of texture cache 0 misses. This increments by 1 for each 32-byte access.
+
+        tex1_cache_sector_misses:  Number of texture cache 1 misses. This increments by 1 for each 32-byte access.
+
+        tex2_cache_sector_misses:  Number of texture cache 2 misses. This increments by 1 for each 32-byte access. Value will be 0 for devices that contain only 2 texture units.
+
+        tex3_cache_sector_misses:  Number of texture cache 3 misses. This increments by 1 for each 32-byte access. Value will be 0 for devices that contain only 2 texture units.
+
+rocache_subp0_gld_warp_count_32b:  Number of 8-bit, 16-bit, and 32-bit global load requests via slice 0 of read-only data cache. Increments per warp.
+
+rocache_subp1_gld_warp_count_32b:  Number of 8-bit, 16-bit, and 32-bit global load requests via slice 1 of read-only data cache. Increments per warp.
+
+rocache_subp2_gld_warp_count_32b:  Number of 8-bit, 16-bit, and 32-bit global load requests via slice 2 of read-only data cache. Increments per warp.
+
+rocache_subp3_gld_warp_count_32b:  Number of 8-bit, 16-bit, and 32-bit global load requests via slice 3 of read-only data cache. Increments per warp.
+
+rocache_subp0_gld_warp_count_64b:  Number of 64-bit global load requests via slice 0 of read-only data cache. Increments per warp.
+
+rocache_subp1_gld_warp_count_64b:  Number of 64-bit global load requests via slice 1 of read-only data cache. Increments per warp.
+
+rocache_subp2_gld_warp_count_64b:  Number of 64-bit global load requests via slice 2 of read-only data cache. Increments per warp.
+
+rocache_subp3_gld_warp_count_64b:  Number of 64-bit global load requests via slice 3 of read-only data cache.Increments per warp.
+
+rocache_subp0_gld_warp_count_128b:  Number of 128-bit global load requests via slice 0 of read-only data cache. Increments per warp.
+
+rocache_subp1_gld_warp_count_128b:  Number of 128-bit global load requests via slice 1 of read-only data cache. Increments per warp.
+
+rocache_subp2_gld_warp_count_128b:  Number of 128-bit global load requests via slice 2 of read-only data cache. Increments per warp.
+
+rocache_subp3_gld_warp_count_128b:  Number of 128-bit global load requests via slice 3 of read-only data cache. Increments per warp.
+
+rocache_subp0_gld_thread_count_32b:  Number of 8-bit, 16-bit, and 32-bit global load requests via slice 0 of read-only data cache. For each instruction it increments by the number of threads in the warp that execute the instruction.
+
+rocache_subp1_gld_thread_count_32b:  Number of 8-bit, 16-bit, and 32-bit global load requests via slice 1 of read-only data cache. For each instruction it increments by the number of threads in the warp that execute the instruction.
+
+rocache_subp2_gld_thread_count_32b:  Number of 8-bit, 16-bit, and 32-bit global load requests via slice 2 of read-only data cache. For each instruction it increments by the number of threads in the warp that execute the instruction.
+
+rocache_subp3_gld_thread_count_32b:  Number of 8-bit, 16-bit, and 32-bit global load requests via slice 3 of read-only data cache. For each instruction it increments by the number of threads in the warp that execute the instruction.
+
+rocache_subp0_gld_thread_count_64b:  Number of 64-bit global load requests via slice 0 of read-only data cache. For each instruction it increments by the number of threads in the warp that execute the instruction.
+
+rocache_subp1_gld_thread_count_64b:  Number of 64-bit global load requests via slice 1 of read-only data cache. For each instruction it increments by the number of threads in the warp that execute the instruction.
+
+rocache_subp2_gld_thread_count_64b:  Number of 64-bit global load requests via slice 2 of read-only data cache. For each instruction it increments by the number of threads in the warp that execute the instruction.
+
+rocache_subp3_gld_thread_count_64b:  Number of 64-bit global load requests via slice 3 of read-only data cache. For each instruction it increments by the number of threads in the warp that execute the instruction.
+
+rocache_subp0_gld_thread_count_128b:  Number of 128-bit global load requests via slice 0 of read-only data cache. For each instruction it increments by the number of threads in the warp that execute the instruction.
+
+rocache_subp1_gld_thread_count_128b:  Number of 128-bit global load requests via slice 1 of read-only data cache. For each instruction it increments by the number of threads in the warp that execute the instruction.
+
+rocache_subp2_gld_thread_count_128b:  Number of 128-bit global load requests via slice 2 of read-only data cache. For each instruction it increments by the number of threads in the warp that execute the instruction.
+
+rocache_subp3_gld_thread_count_128b:  Number of 128-bit global load requests via slice 3 of read-only data cache. For each instruction it increments by the number of threads in the warp that execute the instruction.
+
+               elapsed_cycles_sm:  Elapsed clocks
+
+	Domain domain_b:
+           fb_subp0_read_sectors:  Number of DRAM read requests to sub partition 0, increments by 1 for 32 byte access.
+
+           fb_subp1_read_sectors:  Number of DRAM read requests to sub partition 1, increments by 1 for 32 byte access.
+
+          fb_subp0_write_sectors:  Number of DRAM write requests to sub partition 0, increments by 1 for 32 byte access.
+
+          fb_subp1_write_sectors:  Number of DRAM write requests to sub partition 1, increments by 1 for 32 byte access.
+
+    l2_subp0_write_sector_misses:  Number of write misses in slice 0 of L2 cache. This increments by 1 for each 32-byte access.
+
+    l2_subp1_write_sector_misses:  Number of write misses in slice 1 of L2 cache. This increments by 1 for each 32-byte access.
+
+    l2_subp2_write_sector_misses:  Number of write misses in slice 2 of L2 cache. This increments by 1 for each 32-byte access.
+
+    l2_subp3_write_sector_misses:  Number of write misses in slice 3 of L2 cache. This increments by 1 for each 32-byte access.
+
+     l2_subp0_read_sector_misses:  Number of read misses in slice 0 of L2 cache. This increments by 1 for each 32-byte access.
+
+     l2_subp1_read_sector_misses:  Number of read misses in slice 1 of L2 cache. This increments by 1 for each 32-byte access.
+
+     l2_subp2_read_sector_misses:  Number of read misses in slice 2 of L2 cache. This increments by 1 for each 32-byte access.
+
+     l2_subp3_read_sector_misses:  Number of read misses in slice 3 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp0_write_l1_sector_queries:  Number of write requests from L1 to slice 0 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp1_write_l1_sector_queries:  Number of write requests from L1 to slice 1 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp2_write_l1_sector_queries:  Number of write requests from L1 to slice 2 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp3_write_l1_sector_queries:  Number of write requests from L1 to slice 3 of L2 cache. This increments by 1 for each 32-byte access.
+
+ l2_subp0_read_l1_sector_queries:  Number of read requests from L1 to slice 0 of L2 cache. This increments by 1 for each 32-byte access.
+
+ l2_subp1_read_l1_sector_queries:  Number of read requests from L1 to slice 1 of L2 cache. This increments by 1 for each 32-byte access.
+
+ l2_subp2_read_l1_sector_queries:  Number of read requests from L1 to slice 2 of L2 cache. This increments by 1 for each 32-byte access.
+
+ l2_subp3_read_l1_sector_queries:  Number of read requests from L1 to slice 3 of L2 cache. This increments by 1 for each 32-byte access.
+
+    l2_subp0_read_l1_hit_sectors:  Number of read requests from L1 that hit in slice 0 of L2 cache. This increments by 1 for each 32-byte access.
+
+    l2_subp1_read_l1_hit_sectors:  Number of read requests from L1 that hit in slice 1 of L2 cache. This increments by 1 for each 32-byte access.
+
+    l2_subp2_read_l1_hit_sectors:  Number of read requests from L1 that hit in slice 2 of L2 cache. This increments by 1 for each 32-byte access.
+
+    l2_subp3_read_l1_hit_sectors:  Number of read requests from L1 that hit in slice 3 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp0_read_tex_sector_queries:  Number of read requests from Texture cache to slice 0 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp1_read_tex_sector_queries:  Number of read requests from Texture cache to slice 1 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp2_read_tex_sector_queries:  Number of read requests from Texture cache to slice 2 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp3_read_tex_sector_queries:  Number of read requests from Texture cache to slice 3 of L2 cache. This increments by 1 for each 32-byte access.
+
+   l2_subp0_read_tex_hit_sectors:  Number of read requests from Texture cache that hit in slice 0 of L2 cache. This increments by 1 for each 32-byte access.
+
+   l2_subp1_read_tex_hit_sectors:  Number of read requests from Texture cache that hit in slice 1 of L2 cache. This increments by 1 for each 32-byte access.
+
+   l2_subp2_read_tex_hit_sectors:  Number of read requests from Texture cache that hit in slice 2 of L2 cache. This increments by 1 for each 32-byte access.
+
+   l2_subp3_read_tex_hit_sectors:  Number of read requests from Texture cache that hit in slice 3 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp0_read_sysmem_sector_queries:  Number of system memory read requests to slice 0 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp1_read_sysmem_sector_queries:  Number of system memory read requests to slice 1 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp2_read_sysmem_sector_queries:  Number of system memory read requests to slice 2 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp3_read_sysmem_sector_queries:  Number of system memory read requests to slice 3 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp0_write_sysmem_sector_queries:  Number of system memory write requests to slice 0 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp1_write_sysmem_sector_queries:  Number of system memory write requests to slice 1 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp2_write_sysmem_sector_queries:  Number of system memory write requests to slice 2 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp3_write_sysmem_sector_queries:  Number of system memory write requests to slice 3 of L2 cache. This increments by 1 for each 32-byte access.
+
+l2_subp0_total_read_sector_queries:  Total read requests to slice 0 of L2 cache. This includes requests from  L1, Texture cache, system memory. This increments by 1 for each 32-byte access.
+
+l2_subp1_total_read_sector_queries:  Total read requests to slice 1 of L2 cache. This includes requests from  L1, Texture cache, system memory. This increments by 1 for each 32-byte access.
+
+l2_subp2_total_read_sector_queries:  Total read requests to slice 2 of L2 cache. This includes requests from  L1, Texture cache, system memory. This increments by 1 for each 32-byte access.
+
+l2_subp3_total_read_sector_queries:  Total read requests to slice 3 of L2 cache. This includes requests from  L1, Texture cache, system memory. This increments by 1 for each 32-byte access.
+
+l2_subp0_total_write_sector_queries:  Total write requests to slice 0 of L2 cache. This includes requests from  L1, Texture cache, system memory. This increments by 1 for each 32-byte access.
+
+l2_subp1_total_write_sector_queries:  Total write requests to slice 1 of L2 cache. This includes requests from  L1, Texture cache, system memory. This increments by 1 for each 32-byte access.
+
+l2_subp2_total_write_sector_queries:  Total write requests to slice 2 of L2 cache. This includes requests from  L1, Texture cache, system memory. This increments by 1 for each 32-byte access.
+
+l2_subp3_total_write_sector_queries:  Total write requests to slice 3 of L2 cache. This includes requests from  L1, Texture cache, system memory. This increments by 1 for each 32-byte access.
+
+	Domain domain_c:
+                   gld_inst_8bit:  Total number of 8-bit global load instructions that are executed by all the threads across all thread blocks.
+
+                  gld_inst_16bit:  Total number of 16-bit global load instructions that are executed by all the threads across all thread blocks.
+
+                  gld_inst_32bit:  Total number of 32-bit global load instructions that are executed by all the threads across all thread blocks.
+
+                  gld_inst_64bit:  Total number of 64-bit global load instructions that are executed by all the threads across all thread blocks.
+
+                 gld_inst_128bit:  Total number of 128-bit global load instructions that are executed by all the threads across all thread blocks.
+
+                   gst_inst_8bit:  Total number of 8-bit global store instructions that are executed by all the threads across all thread blocks.
+
+                  gst_inst_16bit:  Total number of 16-bit global store instructions that are executed by all the threads across all thread blocks.
+
+                  gst_inst_32bit:  Total number of 32-bit global store instructions that are executed by all the threads across all thread blocks.
+
+                  gst_inst_64bit:  Total number of 64-bit global store instructions that are executed by all the threads across all thread blocks.
+
+                 gst_inst_128bit:  Total number of 128-bit global store instructions that are executed by all the threads across all thread blocks.
+
+           rocache_gld_inst_8bit:  Total number of 8-bit global load via read-only data cache that are executed by all the threads across all thread blocks.
+
+          rocache_gld_inst_16bit:  Total number of 16-bit global load via read-only data cache that are executed by all the threads across all thread blocks.
+
+          rocache_gld_inst_32bit:  Total number of 32-bit global load via read-only data cache that are executed by all the threads across all thread blocks.
+
+          rocache_gld_inst_64bit:  Total number of 64-bit global load via read-only data cache that are executed by all the threads across all thread blocks.
+
+         rocache_gld_inst_128bit:  Total number of 128-bit global load via read-only data cache that are executed by all the threads across all thread blocks.
+
+	Domain domain_d:
+                 prof_trigger_00:  User profiled generic trigger that can be inserted in any place of the code to collect the related information. Increments per warp.
+
+                 prof_trigger_01:  User profiled generic trigger that can be inserted in any place of the code to collect the related information. Increments per warp.
+
+                 prof_trigger_02:  User profiled generic trigger that can be inserted in any place of the code to collect the related information. Increments per warp.
+
+                 prof_trigger_03:  User profiled generic trigger that can be inserted in any place of the code to collect the related information. Increments per warp.
+
+                 prof_trigger_04:  User profiled generic trigger that can be inserted in any place of the code to collect the related information. Increments per warp.
+
+                 prof_trigger_05:  User profiled generic trigger that can be inserted in any place of the code to collect the related information. Increments per warp.
+
+                 prof_trigger_06:  User profiled generic trigger that can be inserted in any place of the code to collect the related information. Increments per warp.
+
+                 prof_trigger_07:  User profiled generic trigger that can be inserted in any place of the code to collect the related information. Increments per warp.
+
+                  warps_launched:  Number of warps launched on a multiprocessor.
+
+                threads_launched:  Number of threads launched on a multiprocessor.
+
+                    inst_issued1:  Number of single instruction issued per cycle
+
+                    inst_issued2:  Number of dual instructions issued per cycle
+
+                   inst_executed:  Number of instructions executed, do not include replays.
+
+            thread_inst_executed:  Number of instructions executed by all threads, does not include replays. For each instruction it increments by the number of threads in the warp that execute the instruction.
+
+not_predicated_off_thread_inst_executed:  Number of not predicated off instructions executed by all threads, does not include replays. For each instruction it increments by the number of threads that execute this instruction.
+
+                      atom_count:  Number of warps executing atomic reduction operations. Increments by one if at least one thread in a warp executes the instruction.
+
+                  atom_cas_count:  Number of warps executing atomic compare and swap operations. Increments by one if at least one thread in a warp executes the instruction.
+
+                      gred_count:  Number of warps executing reduction operations on global memory. Increments by one if at least one thread in a warp executes the instruction
+
+                     shared_load:  Number of executed load instructions where state space is specified as shared, increments per warp on a multiprocessor.
+
+                    shared_store:  Number of executed store instructions where state space is specified as shared, increments per warp on a multiprocessor.
+
+                      local_load:  Number of executed load instructions where state space is specified as local, increments per warp on a multiprocessor.
+
+                     local_store:  Number of executed store instructions where state space is specified as local, increments per warp on a multiprocessor.
+
+                     gld_request:  Number of executed load instructions where the state space is not specified and hence generic addressing is used, increments per warp on a multiprocessor. It can include the load operations from global,local and shared state space.
+
+                     gst_request:  Number of executed store instructions where the state space is not specified and hence generic addressing is used, increments per warp on a multiprocessor. It can include the store operations to global,local and shared state space.
+
+                   active_cycles:  Number of cycles a multiprocessor has at least one active warp.
+
+                    active_warps:  Accumulated number of active warps per cycle. For every cycle it increments by the number of active warps in the cycle which can be in the range 0 to 64.
+
+                 sm_cta_launched:  Number of thread blocks launched on a multiprocessor.
+
+         local_load_transactions:  Number of local load transactions from L1 cache. Increments by 1 per transaction. Transaction can be 32/64/96/128B.
+
+        local_store_transactions:  Number of local store transactions to L1 cache. Increments by 1 per transaction. Transaction can be 32/64/96/128B.
+
+     l1_shared_load_transactions:  Number of shared load transactions. Increments by 1 per transaction. Transaction can be 32/64/96/128B.
+
+    l1_shared_store_transactions:  Number of shared store transactions. Increments by 1 per transaction. Transaction can be 32/64/96/128B.
+
+   __l1_global_load_transactions:  Number of global load transactions from L1 cache. Increments by 1 per transaction. Transaction can be 32/64/96/128B.
+
+  __l1_global_store_transactions:  Number of global store transactions from L1 cache. Increments by 1 per transaction. Transaction can be 32/64/96/128B.
+
+               l1_local_load_hit:  Number of cache lines that hit in L1 cache for local memory load accesses. In case of perfect coalescing this increments by 1,2, and 4 for 32, 64 and 128 bit accesses by a warp respectively.
+
+              l1_local_load_miss:  Number of cache lines that miss in L1 cache for local memory load accesses. In case of perfect coalescing this increments by 1,2, and 4 for 32, 64 and 128 bit accesses by a warp respectively.
+
+              l1_local_store_hit:  Number of cache lines that hit in L1 cache for local memory store accesses. In case of perfect coalescing this increments by 1,2, and 4 for 32, 64 and 128 bit accesses by a warp respectively.
+
+             l1_local_store_miss:  Number of cache lines that miss in L1 cache for local memory store accesses. In case of perfect coalescing this increments by 1,2, and 4 for 32,64 and 128 bit accesses by a warp respectively.
+
+              l1_global_load_hit:  Number of cache lines that hit in L1 cache for global memory load accesses. In case of perfect coalescing this increments by 1,2, and 4 for 32, 64 and 128 bit accesses by a warp respectively.
+
+             l1_global_load_miss:  Number of cache lines that miss in L1 cache for global memory load accesses. In case of perfect coalescing this increments by 1,2, and 4 for 32, 64 and 128 bit accesses by a warp respectively.
+
+uncached_global_load_transaction:  Number of uncached global load transactions. Increments by 1 per transaction. Transaction can be 32/64/96/128B.
+
+        global_store_transaction:  Number of global store transactions. Increments by 1 per transaction. Transaction can be 32/64/96/128B.
+
+              shared_load_replay:  Replays caused due to shared load bank conflict (when the addresses for two or more shared memory load requests fall in the same memory bank) or when there is no conflict but the total number of words accessed by all threads in the warp executing that instruction exceed the number of words that can be loaded in one cycle (256 bytes).
+
+             shared_store_replay:  Replays caused due to shared store bank conflict (when the addresses for two or more shared memory store requests fall in the same memory bank) or when there is no conflict but the total number of words accessed by all threads in the warp executing that instruction exceed the number of words that can be stored in one cycle.
+
+global_ld_mem_divergence_replays:  Number of instruction replays for global memory loads. Instruction is replayed if the instruction is accessing more than one cache line of 128 bytes. For each extra cache line access the counter is incremented by 1.
+
+global_st_mem_divergence_replays:  Number of instruction replays for global memory stores. Instruction is replayed if the instruction is accessing more than one cache line of 128 bytes. For each extra cache line access the counter is incremented by 1.
+

@@ -1,0 +1,17 @@
+==21594== NVPROF is profiling process 21594, command: ./test-stream-y
+==21594== Profiling application: ./test-stream-y
+==21594== Profiling result:
+"Start","Duration","Grid X","Grid Y","Grid Z","Block X","Block Y","Block Z","Registers Per Thread","Static SMem","Dynamic SMem","Size","Throughput","Device","Context","Stream","Name"
+s,ms,,,,,,,,KB,B,MB,GB/s,,,,
+0.548405,41.012539,,,,,,,,,,269.485056,6.570797,"Tesla K20c (0)","1","7","[CUDA memcpy HtoD]"
+0.590261,30.622698,152,1,1,32,32,1,45,0.000000,1.740800e+04,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, float*, float*, float*, int, int, float*) [114]"
+0.620887,33.479666,152,1,1,32,32,1,45,0.000000,1.740800e+04,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__1__(float*, int, int, float*, float*, float*, int, int, float*) [126]"
+0.654371,40.964314,,,,,,,,,,269.485056,6.578532,"Tesla K20c (0)","1","7","[CUDA memcpy DtoH]"
+1.368012,40.940762,,,,,,,,,,269.485056,6.582317,"Tesla K20c (0)","1","7","[CUDA memcpy HtoD]"
+1.409680,30.615786,152,1,1,32,32,1,45,0.000000,1.740800e+04,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, float*, float*, float*, int, int, float*) [160]"
+1.440300,33.451345,152,1,1,32,32,1,45,0.000000,1.740800e+04,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__1__(float*, int, int, float*, float*, float*, int, int, float*) [172]"
+1.473754,40.969115,,,,,,,,,,269.485056,6.577761,"Tesla K20c (0)","1","7","[CUDA memcpy DtoH]"
+1.530769,40.936857,,,,,,,,,,269.485056,6.582944,"Tesla K20c (0)","1","7","[CUDA memcpy HtoD]"
+1.572437,30.616842,152,1,1,32,32,1,45,0.000000,1.740800e+04,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, float*, float*, float*, int, int, float*) [206]"
+1.603057,33.464657,152,1,1,32,32,1,45,0.000000,1.740800e+04,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__1__(float*, int, int, float*, float*, float*, int, int, float*) [218]"
+1.636526,40.980795,,,,,,,,,,269.485056,6.575886,"Tesla K20c (0)","1","7","[CUDA memcpy DtoH]"

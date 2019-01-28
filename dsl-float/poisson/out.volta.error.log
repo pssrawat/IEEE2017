@@ -1,0 +1,134 @@
++ make -f Makefile.volta REGCOUNT=32
+nvcc -O3 -maxrregcount=32 -ccbin=g++ -std=c++11 -Xcompiler "-fPIC -fopenmp -O3 -fno-strict-aliasing" --use_fast_math -Xptxas "-dlcm=cg" -gencode arch=compute_60,code=sm_60  ../common/cuda_header.cu poisson.driver.cpp poisson_gold.cpp poisson-gen-2.cu -o opt
+nvprof --print-gpu-trace ./opt > /dev/null 2>opt-results
+../common/time.awk
+
+-------------------- PPCG Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  0
+Untiled MemCopy Time from Host to Device (ms) :  0
+PPCG Run Time (ms) :  0
+
+-------------------- Untiled Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  55.128
+Untiled MemCopy Time from Host to Device (ms) :  56.031
+Untiled Run Time (ms) :  30.7007
+
+-------------------- Forma Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  54.419
+Untiled MemCopy Time from Host to Device (ms) :  55.852
+Forma Overtile Run Time (ms) :  98.391
+
+-------------------- Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  55.031
+Untiled MemCopy Time from Host to Device (ms) :  55.175
+Overtile Run Time (ms) :  59.146
+
+-------------------- Opt Run ----------------------
+
+Opt MemCopy Time from Host to Device (ms) :  61.636
+Opt MemCopy Time from Host to Device (ms) :  41.544
+Opt Run Time (ms) :  9.1343
+nvcc -O3 -maxrregcount=32 -ccbin=g++ -std=c++11 -Xcompiler "-fPIC -fopenmp -O3 -fno-strict-aliasing" --use_fast_math -Xptxas "-dlcm=cg" -gencode arch=compute_60,code=sm_60  ../common/cuda_header.cu poisson.driver.cpp poisson_gold.cpp poisson-gen-2-32x32.cu -o opt
+nvprof --print-gpu-trace ./opt > /dev/null 2>opt-results
+../common/time.awk
+
+-------------------- PPCG Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  0
+Untiled MemCopy Time from Host to Device (ms) :  0
+PPCG Run Time (ms) :  0
+
+-------------------- Untiled Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  55.128
+Untiled MemCopy Time from Host to Device (ms) :  56.031
+Untiled Run Time (ms) :  30.7007
+
+-------------------- Forma Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  54.419
+Untiled MemCopy Time from Host to Device (ms) :  55.852
+Forma Overtile Run Time (ms) :  98.391
+
+-------------------- Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  55.031
+Untiled MemCopy Time from Host to Device (ms) :  55.175
+Overtile Run Time (ms) :  59.146
+
+-------------------- Opt Run ----------------------
+
+Opt MemCopy Time from Host to Device (ms) :  61.548
+Opt MemCopy Time from Host to Device (ms) :  41.537
+Opt Run Time (ms) :  9.2348
++ make -f Makefile.volta REGCOUNT=64
+nvcc -O3 -maxrregcount=64 -ccbin=g++ -std=c++11 -Xcompiler "-fPIC -fopenmp -O3 -fno-strict-aliasing" --use_fast_math -Xptxas "-dlcm=cg" -gencode arch=compute_60,code=sm_60  ../common/cuda_header.cu poisson.driver.cpp poisson_gold.cpp poisson-gen-2.cu -o opt
+nvprof --print-gpu-trace ./opt > /dev/null 2>opt-results
+../common/time.awk
+
+-------------------- PPCG Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  0
+Untiled MemCopy Time from Host to Device (ms) :  0
+PPCG Run Time (ms) :  0
+
+-------------------- Untiled Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  55.128
+Untiled MemCopy Time from Host to Device (ms) :  56.031
+Untiled Run Time (ms) :  30.7007
+
+-------------------- Forma Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  54.419
+Untiled MemCopy Time from Host to Device (ms) :  55.852
+Forma Overtile Run Time (ms) :  98.391
+
+-------------------- Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  55.031
+Untiled MemCopy Time from Host to Device (ms) :  55.175
+Overtile Run Time (ms) :  59.146
+
+-------------------- Opt Run ----------------------
+
+Opt MemCopy Time from Host to Device (ms) :  61.991
+Opt MemCopy Time from Host to Device (ms) :  41.53
+Opt Run Time (ms) :  8.5617
+nvcc -O3 -maxrregcount=64 -ccbin=g++ -std=c++11 -Xcompiler "-fPIC -fopenmp -O3 -fno-strict-aliasing" --use_fast_math -Xptxas "-dlcm=cg" -gencode arch=compute_60,code=sm_60  ../common/cuda_header.cu poisson.driver.cpp poisson_gold.cpp poisson-gen-2-32x32.cu -o opt
+nvprof --print-gpu-trace ./opt > /dev/null 2>opt-results
+../common/time.awk
+
+-------------------- PPCG Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  0
+Untiled MemCopy Time from Host to Device (ms) :  0
+PPCG Run Time (ms) :  0
+
+-------------------- Untiled Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  55.128
+Untiled MemCopy Time from Host to Device (ms) :  56.031
+Untiled Run Time (ms) :  30.7007
+
+-------------------- Forma Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  54.419
+Untiled MemCopy Time from Host to Device (ms) :  55.852
+Forma Overtile Run Time (ms) :  98.391
+
+-------------------- Overtile Run ----------------------
+
+Untiled MemCopy Time from Host to Device (ms) :  55.031
+Untiled MemCopy Time from Host to Device (ms) :  55.175
+Overtile Run Time (ms) :  59.146
+
+-------------------- Opt Run ----------------------
+
+Opt MemCopy Time from Host to Device (ms) :  54.062
+Opt MemCopy Time from Host to Device (ms) :  41.444
+Opt Run Time (ms) :  12.985

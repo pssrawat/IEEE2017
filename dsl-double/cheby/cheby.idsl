@@ -1,0 +1,29 @@
+stencil cheby (h2inv, a, b, RHS, Ap, Dinv, Ac, out) {
+   temp1 -= h2inv * (0.03f*(Ac[-1,-1,-1]+Ac[-1,-1,1]+Ac[-1,1,-1]+Ac[-1,1,1]) + 0.1f*(Ac[-1,-1,0]+Ac[-1,0,-1]+Ac[-1,0,1]+Ac[-1,1,0]) + 0.46f*Ac[-1,0,0]);
+   temp1 += Ac[0,0,0] - h2inv * (0.1f*(Ac[0,-1,-1]+Ac[0,-1,1]+Ac[0,1,-1]+Ac[0,1,1]) + 0.46f*(Ac[0,-1,0]+Ac[0,0,-1]+Ac[0,0,1]+Ac[0,1,0]) - 4.26f*Ac[0,0,0]);
+   temp1 -= h2inv * (0.03f*(Ac[1,-1,-1]+Ac[1,-1,1]+Ac[1,1,-1]+Ac[1,1,1]) + 0.1f*(Ac[1,-1,0]+Ac[1,0,-1]+Ac[1,0,1]+Ac[1,1,0]) + 0.46f*Ac[1,0,0]); 
+   out1 = Ac[0,0,0] + a*(Ac[0,0,0] - Ap[0,0,0]) + b*Dinv[0,0,0]*(RHS[0,0,0] - temp1[0,0,0]);
+
+   temp2 -= h2inv * (0.03f*(out1[-1,-1,-1]+out1[-1,-1,1]+out1[-1,1,-1]+out1[-1,1,1]) + 0.1f*(out1[-1,-1,0]+out1[-1,0,-1]+out1[-1,0,1]+out1[-1,1,0]) + 0.46f*out1[-1,0,0]);
+   temp2 += out1[0,0,0] - h2inv * (0.1f*(out1[0,-1,-1]+out1[0,-1,1]+out1[0,1,-1]+out1[0,1,1]) + 0.46f*(out1[0,-1,0]+out1[0,0,-1]+out1[0,0,1]+out1[0,1,0]) - 4.26f*out1[0,0,0]);
+   temp2 -= h2inv * (0.03f*(out1[1,-1,-1]+out1[1,-1,1]+out1[1,1,-1]+out1[1,1,1]) + 0.1f*(out1[1,-1,0]+out1[1,0,-1]+out1[1,0,1]+out1[1,1,0]) + 0.46f*out1[1,0,0]); 
+   out = out1[0,0,0] + a*(out1[0,0,0] - Ac[0,0,0]) + b*Dinv[0,0,0]*(RHS[0,0,0] - temp2[0,0,0]);
+
+}
+
+parameter L,M,N;
+float h2inv;
+float a;
+float b;
+float Ac[L,M,N];
+float Ap[L,M,N];
+float Dinv[L,M,N];
+float RHS[L,M,N];
+float out[L,M,N];
+float out1[L,M,N];
+float out2[L,M,N];
+float temp1[L,M,N];
+float temp2[L,M,N];
+temporary out, out1, out2, temp1, temp2;
+cheby (h2inv, c1, c2, RHS, Ap, Dinv, Ac, out2);
+out = cheby (h2inv, c1, c2, RHS, out1, Dinv, out2, out);

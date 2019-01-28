@@ -1,0 +1,16 @@
+==95068== NVPROF is profiling process 95068, command: ./test
+==95068== Profiling application: ./test
+==95068== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+338.45ms  33.863ms                    -               -         -         -         -  256.00MB  7.3828GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+374.01ms  1.7694ms          (256 256 1)       (32 32 1)        13        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(float*, int, int, float*) [127]
+375.78ms  1.7840ms          (256 256 1)       (32 32 1)        13        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(float*, int, int, float*) [134]
+377.56ms  1.7841ms          (256 256 1)       (32 32 1)        13        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(float*, int, int, float*) [141]
+379.35ms  1.7846ms          (256 256 1)       (32 32 1)        13        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(float*, int, int, float*) [148]
+381.14ms  22.317ms                    -               -         -         -         -  256.00MB  11.202GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

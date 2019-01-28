@@ -1,0 +1,13 @@
+enabled = 1
+155719
+Values at index (8,8,11) differ : 0.433105 and 0.433105
+Values at index (8,8,12) differ : 0.599723 and 0.599723
+Values at index (8,8,20) differ : 0.478836 and 0.478836
+Values at index (8,8,55) differ : 0.877607 and 0.877607
+Values at index (8,8,180) differ : 0.829949 and 0.829949
+Values at index (8,15,32) differ : 0.887660 and 0.887660
+Values at index (8,27,208) differ : 0.867891 and 0.867891
+Values at index (16,124,486) differ : 0.802015 and 0.802015
+Values at index (229,225,409) differ : 0.891358 and 0.891358
+[Test] Max Error : 8.881784e-16 @ (229,225,409)
+[Test] RMS Error : 8.938813e-17

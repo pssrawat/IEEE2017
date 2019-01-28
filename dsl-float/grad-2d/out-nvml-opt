@@ -1,0 +1,23 @@
+enabled = 1
+142870
+Values at index (4,9) differ : 3.132856 and 3.132856
+Values at index (4,10) differ : 3.448828 and 3.448828
+Values at index (4,43) differ : 3.053757 and 3.053758
+Values at index (4,62) differ : 4.052693 and 4.052694
+Values at index (4,128) differ : 12.563619 and 12.563629
+Values at index (4,4371) differ : 6.464671 and 6.464685
+Values at index (4,5275) differ : 8.482018 and 8.481956
+Values at index (28,8141) differ : 21.155109 and 21.154964
+Values at index (29,628) differ : 25.303444 and 25.303734
+Values at index (94,3572) differ : 18.463606 and 18.463909
+Values at index (267,5432) differ : 21.012838 and 21.012474
+Values at index (601,187) differ : 28.329485 and 28.329865
+Values at index (709,1206) differ : 28.620380 and 28.619944
+Values at index (723,1431) differ : 20.125238 and 20.124672
+Values at index (1044,7732) differ : 59.661964 and 59.662659
+Values at index (4000,7065) differ : 45.475628 and 45.476524
+Values at index (4094,1562) differ : 28.969534 and 28.970734
+Values at index (6968,4783) differ : 48.325260 and 48.323227
+Values at index (7762,5007) differ : 60.419750 and 60.422470
+[Test] Max Error : 2.719879e-03 @ (,7762,5007)
+[Test] RMS Error : 9.760839e-07

@@ -1,0 +1,30 @@
++ nvcc -O3 -maxrregcount=32 -ccbin=g++ -std=c++11 -Xcompiler '-fPIC -fopenmp -O3 -fno-strict-aliasing' --use_fast_math -Xptxas '-v -dlcm=cg' -gencode arch=compute_60,code=sm_60 ../../cuda_header.cu ../jacobi_gold.cpp jacobi.driver.cpp test-stream-y-overlap-4-reg-divide.cu -o test
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z28__kernel___forma_kernel__0__PfiiiiS_' for 'sm_60'
+ptxas info    : Function properties for _Z28__kernel___forma_kernel__0__PfiiiiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, 352 bytes cmem[0], 4 bytes cmem[2]
++ nvprof --print-gpu-trace ./test
+==31496== NVPROF is profiling process 31496, command: ./test
+Time taken by reference : 0.093594 secs
+Values at index (4,4) differ : 0.099343 and 0.099343
+Values at index (4,12) differ : 0.099709 and 0.099709
+Values at index (4,20) differ : 0.118061 and 0.118061
+Values at index (4,302) differ : 0.120792 and 0.120792
+Values at index (9,5730) differ : 0.122081 and 0.122081
+Values at index (17,1833) differ : 0.144738 and 0.144738
+[Test] Max Error : 4.470348e-08 @ (,17,1833)
+[Test] RMS Error : 8.183905e-09
+==31496== Profiling application: ./test
+==31496== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+383.62ms  31.271ms                    -               -         -         -         -  256.00MB  7.9947GB/s    Pageable      Device  Quadro GP100 (0         1         7  [CUDA memcpy HtoD]
+415.39ms  2.4207ms            (69 16 1)       (128 1 1)        29        0B  2.0000KB         -           -           -           -  Quadro GP100 (0         1         7  __kernel___forma_kernel__0__(float*, int, int, int, int, float*) [113]
+417.81ms  20.851ms                    -               -         -         -         -  256.00MB  11.990GB/s      Device    Pageable  Quadro GP100 (0         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

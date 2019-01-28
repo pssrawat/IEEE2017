@@ -1,0 +1,29 @@
+==175919== NVPROF is profiling process 175919, command: ./test
+==175919== Profiling application: ./test
+==175919== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+330.60ms  12.698ms                    -               -         -         -         -  103.00MB  7.9209GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+343.85ms  12.051ms                    -               -         -         -         -  103.00MB  8.3466GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+356.53ms  12.428ms                    -               -         -         -         -  103.00MB  8.0932GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+369.53ms  12.083ms                    -               -         -         -         -  103.00MB  8.3245GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+382.21ms  12.378ms                    -               -         -         -         -  103.00MB  8.1257GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+395.00ms  11.889ms                    -               -         -         -         -  103.00MB  8.4600GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+407.33ms  11.943ms                    -               -         -         -         -  103.00MB  8.4220GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+419.72ms  11.865ms                    -               -         -         -         -  103.00MB  8.4772GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+432.00ms  11.894ms                    -               -         -         -         -  103.00MB  8.4567GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+444.50ms  12.158ms                    -               -         -         -         -  103.00MB  8.2733GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+457.20ms  11.895ms                    -               -         -         -         -  103.00MB  8.4559GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+469.54ms  11.854ms                    -               -         -         -         -  103.00MB  8.4851GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+481.81ms  11.845ms                    -               -         -         -         -  103.00MB  8.4918GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+493.66ms  14.119ms           (19 75 75)        (16 4 4)       128        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  hypterm(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float, float, float, int, int, int) [161]
+507.79ms  13.879ms                    -               -         -         -         -  103.00MB  7.2471GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+521.87ms  13.787ms                    -               -         -         -         -  103.00MB  7.2957GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+535.84ms  13.836ms                    -               -         -         -         -  103.00MB  7.2699GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+549.87ms  13.816ms                    -               -         -         -         -  103.00MB  7.2802GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+563.87ms  13.818ms                    -               -         -         -         -  103.00MB  7.2790GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

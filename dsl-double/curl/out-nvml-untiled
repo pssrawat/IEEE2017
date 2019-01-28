@@ -1,0 +1,10 @@
+enabled = 1
+69412
+Values x at index (1,1,2) differ : 0.580858 and 0.580858
+Values y at index (1,1,53) differ : 0.199541 and 0.199541
+Values y at index (1,1,58) differ : 0.864172 and 0.864172
+Values z at index (1,3,290) differ : 1.027452 and 1.027452
+Values y at index (1,74,121) differ : -0.107008 and -0.107008
+Values y at index (42,409,51) differ : 1.436725 and 1.436725
+[Test] Max Error : 4.768372e-07 @ (42,409,51,y)
+[Test] RMS Error : 2.174282e-08

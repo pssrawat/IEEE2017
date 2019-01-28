@@ -1,0 +1,14 @@
+==24846== NVPROF is profiling process 24846, command: ./test
+==24846== Profiling application: ./test
+==24846== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+370.98ms  61.346ms                    -               -         -         -         -  512.00MB  8.1505GB/s    Pageable      Device  Quadro GP100 (0         1         7  [CUDA memcpy HtoD]
+433.67ms  5.6711ms            (19 19 1)       (32 32 1)        32        0B  8.0000KB         -           -           -           -  Quadro GP100 (0         1         7  __kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*) [115]
+439.34ms  5.6655ms            (19 19 1)       (32 32 1)        32        0B  8.0000KB         -           -           -           -  Quadro GP100 (0         1         7  __kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*) [117]
+445.01ms  57.601ms                    -               -         -         -         -  512.00MB  8.6804GB/s      Device    Pageable  Quadro GP100 (0         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

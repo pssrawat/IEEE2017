@@ -1,0 +1,19 @@
+==136953== NVPROF is profiling process 136953, command: ./test
+==136953== Profiling application: ./test
+==136953== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+329.87ms  30.279ms                    -               -         -         -         -  254.72MB  8.2152GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+360.89ms  29.821ms                    -               -         -         -         -  254.72MB  8.3413GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+391.51ms  29.596ms                    -               -         -         -         -  254.72MB  8.4048GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+421.72ms  29.795ms                    -               -         -         -         -  254.72MB  8.3486GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+452.91ms  4.6896ms           (20 80 80)        (16 4 4)        32        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(double, double, double, double*, double*, double*, double*, int, int, int, double*) [134]
+457.60ms  4.6606ms           (20 80 80)        (16 4 4)        32        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(double, double, double, double*, double*, double*, double*, int, int, int, double*) [147]
+462.26ms  4.7314ms           (20 80 80)        (16 4 4)        32        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(double, double, double, double*, double*, double*, double*, int, int, int, double*) [160]
+466.99ms  4.8328ms           (20 80 80)        (16 4 4)        32        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(double, double, double, double*, double*, double*, double*, int, int, int, double*) [173]
+471.83ms  34.478ms                    -               -         -         -         -  254.72MB  7.2147GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

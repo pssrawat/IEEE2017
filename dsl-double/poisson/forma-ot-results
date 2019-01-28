@@ -1,0 +1,14 @@
+==31811== NVPROF is profiling process 31811, command: ./forma-ot
+==31811== Profiling application: ./forma-ot
+==31811== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+214.28ms  54.419ms                    -               -         -         -         -  512.00MB  9.1879GB/s    Pageable      Device  TITAN X (Pascal         1         7  [CUDA memcpy HtoD]
+269.48ms  50.158ms         (43 128 128)        (16 8 8)        32        0B  5.9688KB         -           -           -           -  TITAN X (Pascal         1         7  __kernel___forma_kernel__0__(float*, int, int, int, float*) [125]
+319.64ms  48.233ms         (43 128 128)        (16 8 8)        32        0B  5.9688KB         -           -           -           -  TITAN X (Pascal         1         7  __kernel___forma_kernel__0__(float*, int, int, int, float*) [132]
+367.88ms  55.852ms                    -               -         -         -         -  512.00MB  8.9522GB/s      Device    Pageable  TITAN X (Pascal         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

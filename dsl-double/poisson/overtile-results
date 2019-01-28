@@ -1,0 +1,15 @@
+==31794== NVPROF is profiling process 31794, command: ./overtile
+==31794== Profiling application: ./overtile
+==31794== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+203.11ms  55.031ms                    -               -         -         -         -  512.00MB  9.0858GB/s    Pageable      Device  TITAN X (Pascal         1         7  [CUDA memcpy HtoD]
+258.15ms  3.0025ms                    -               -         -         -         -  512.00MB  166.53GB/s      Device      Device  TITAN X (Pascal         1         7  [CUDA memcpy DtoD]
+261.18ms  30.828ms           (86 86 37)         (8 8 8)        32  7.0313KB        0B         -           -           -           -  TITAN X (Pascal         1         7  ot_kernel_sdsl_program_635d9b42a041e9b57f894e8cc42d91ee12f224a2(float*, float*, int, int, int) [113]
+292.01ms  28.318ms           (86 86 37)         (8 8 8)        32  7.0313KB        0B         -           -           -           -  TITAN X (Pascal         1         7  ot_kernel_sdsl_program_635d9b42a041e9b57f894e8cc42d91ee12f224a2(float*, float*, int, int, int) [121]
+320.33ms  55.175ms                    -               -         -         -         -  512.00MB  9.0620GB/s      Device    Pageable  TITAN X (Pascal         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

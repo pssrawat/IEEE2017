@@ -1,0 +1,40 @@
+enabled = 1
+99639
+Values at index (4,4,6) differ : 0.003970 and 0.003970
+Values at index (4,4,10) differ : 0.001980 and 0.001980
+Values at index (4,4,15) differ : -0.003982 and -0.003982
+Values at index (4,4,24) differ : 0.016508 and 0.016508
+Values at index (4,4,88) differ : 0.004127 and 0.004127
+Values at index (4,4,249) differ : 0.032177 and 0.032177
+Values at index (4,7,134) differ : 0.000988 and 0.000988
+Values at index (4,57,155) differ : 0.036225 and 0.036225
+[Test] Max Error : 1.387779e-17 @ (4,57,155)
+[Test] RMS Error : 1.529223e-18
+Values at index (4,4,4) differ : 0.009605 and 0.009605
+Values at index (4,4,22) differ : -0.017575 and -0.017575
+Values at index (4,4,234) differ : -0.003549 and -0.003549
+Values at index (4,5,123) differ : -0.031033 and -0.031033
+Values at index (4,24,189) differ : -0.011096 and -0.011096
+Values at index (4,25,292) differ : 0.015826 and 0.015826
+Values at index (5,68,41) differ : -0.038121 and -0.038121
+[Test] Max Error : 1.387779e-17 @ (5,68,41)
+[Test] RMS Error : 1.477012e-18
+Values at index (4,4,5) differ : -0.007491 and -0.007491
+Values at index (4,4,8) differ : -0.010939 and -0.010939
+Values at index (4,4,280) differ : -0.018612 and -0.018612
+Values at index (4,62,146) differ : 0.037735 and 0.037735
+Values at index (46,180,122) differ : 0.048791 and 0.048791
+[Test] Max Error : 2.081668e-17 @ (46,180,122)
+[Test] RMS Error : 1.639501e-18
+Values at index (4,4,4) differ : 0.025645 and 0.025645
+Values at index (4,4,62) differ : 0.021650 and 0.021650
+Values at index (4,6,264) differ : 0.033627 and 0.033627
+Values at index (4,147,11) differ : -0.038407 and -0.038407
+[Test] Max Error : 2.081668e-17 @ (4,147,11)
+[Test] RMS Error : 1.871970e-18
+Values at index (4,4,4) differ : 0.025669 and 0.025669
+Values at index (4,4,86) differ : -0.036860 and -0.036860
+Values at index (4,131,80) differ : -0.034700 and -0.034700
+Values at index (21,128,267) differ : -0.045087 and -0.045087
+[Test] Max Error : 2.775558e-17 @ (21,128,267)
+[Test] RMS Error : 2.447487e-18

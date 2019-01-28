@@ -1,0 +1,28 @@
+enabled = 1
+169798
+Values at index (8,8,8) differ : 0.468235 and 0.468846
+Values at index (8,8,22) differ : 0.174146 and 0.173039
+Values at index (8,8,38) differ : 0.554704 and 0.553423
+Values at index (8,8,147) differ : 0.073939 and 0.075676
+Values at index (8,8,328) differ : 0.143090 and 0.144920
+Values at index (8,8,329) differ : 0.139471 and 0.141828
+Values at index (8,10,191) differ : 0.563866 and 0.566259
+Values at index (8,39,401) differ : 0.204019 and 0.201074
+Values at index (8,46,223) differ : 0.608366 and 0.604950
+Values at index (8,82,194) differ : 0.644519 and 0.640560
+Values at index (8,153,60) differ : 0.701474 and 0.697250
+Values at index (8,204,221) differ : 0.060502 and 0.064734
+Values at index (8,315,343) differ : 0.313492 and 0.317806
+Values at index (9,142,365) differ : 0.072252 and 0.076954
+Values at index (11,212,232) differ : 0.067674 and 0.072907
+Values at index (13,393,295) differ : 0.329487 and 0.323577
+Values at index (24,217,52) differ : 0.198600 and 0.204555
+Values at index (24,218,51) differ : 0.220452 and 0.228253
+Values at index (32,267,429) differ : 0.117412 and 0.126718
+Values at index (32,268,428) differ : 0.119841 and 0.129485
+Values at index (132,172,53) differ : 0.741609 and 0.731869
+Values at index (172,178,194) differ : 0.231083 and 0.240986
+Values at index (258,416,210) differ : 0.771267 and 0.760540
+Values at index (259,415,210) differ : 0.768381 and 0.757248
+[Test] Max Error : 1.113237e-02 @ (259,415,210)
+[Test] RMS Error : 3.896286e-04

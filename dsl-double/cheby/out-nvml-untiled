@@ -1,0 +1,8 @@
+enabled = 1
+119299
+Values at index (4,4,16) differ : 0.722000 and 0.722000
+Values at index (4,4,155) differ : 0.959683 and 0.959683
+Values at index (4,5,64) differ : 0.976522 and 0.976522
+Values at index (4,12,71) differ : 1.025993 and 1.025993
+[Test] Max Error : 4.440892e-16 @ (4,12,71)
+[Test] RMS Error : 3.432883e-17

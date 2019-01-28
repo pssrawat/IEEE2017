@@ -1,0 +1,14 @@
+==18414== NVPROF is profiling process 18414, command: ./test
+==18414== Profiling application: ./test
+==18414== Profiling result:
+"Start","Duration","Grid X","Grid Y","Grid Z","Block X","Block Y","Block Z","Registers Per Thread","Static SMem","Dynamic SMem","Size","Throughput","Device","Context","Stream","Name"
+s,ms,,,,,,,,KB,B,MB,GB/s,,,,
+0.197922,40.856635,,,,,,,,,,268.435456,6.570180,"Tesla K20c (0)","1","7","[CUDA memcpy HtoD]"
+0.239005,8.145445,69,16,1,128,1,1,26,0.000000,2.048000e+03,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, int, int, float*) [105]"
+0.247155,40.719865,,,,,,,,,,268.435456,6.592248,"Tesla K20c (0)","1","7","[CUDA memcpy DtoH]"
+0.988288,40.806650,,,,,,,,,,268.435456,6.578228,"Tesla K20c (0)","1","7","[CUDA memcpy HtoD]"
+1.029298,8.079812,69,16,1,128,1,1,26,0.000000,2.048000e+03,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, int, int, float*) [127]"
+1.037382,40.723577,,,,,,,,,,268.435456,6.591647,"Tesla K20c (0)","1","7","[CUDA memcpy DtoH]"
+1.093756,40.814586,,,,,,,,,,268.435456,6.576949,"Tesla K20c (0)","1","7","[CUDA memcpy HtoD]"
+1.134768,8.031203,69,16,1,128,1,1,26,0.000000,2.048000e+03,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, int, int, float*) [149]"
+1.142803,40.776826,,,,,,,,,,268.435456,6.583039,"Tesla K20c (0)","1","7","[CUDA memcpy DtoH]"

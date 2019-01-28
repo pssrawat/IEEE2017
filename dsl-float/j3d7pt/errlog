@@ -1,0 +1,6 @@
+ptxas info    : 0 bytes gmem
+test.cu(131): error: identifier "b3" is undefined
+
+test.cu(132): error: identifier "t3" is undefined
+
+2 errors detected in the compilation of "/tmp/tmpxft_00000a6a_00000000-25_test.cpp1.ii".

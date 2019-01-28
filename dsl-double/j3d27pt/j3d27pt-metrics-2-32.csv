@@ -1,0 +1,130 @@
+==24727== NVPROF is profiling process 24727, command: ./test
+==24727== Warning: Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==24727== Profiling application: ./test
+==24727== Profiling result:
+==24727== Metric result:
+"Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l1_cache_global_hit_rate","L1 Global Hit Rate",0.000000%,0.000000%,0.000000%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l1_cache_local_hit_rate","L1 Local Hit Rate",0.000000%,0.000000%,0.000000%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"sm_efficiency","Multiprocessor Activity",96.895270%,97.482149%,97.188709%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"ipc","Executed IPC",2.488898,2.489753,2.489326
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"achieved_occupancy","Achieved Occupancy",0.994028,0.994369,0.994198
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"gld_requested_throughput","Requested Global Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"gst_requested_throughput","Requested Global Store Throughput",20.701899GB/s,20.780917GB/s,20.741408GB/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"sm_efficiency_instance","Multiprocessor Activity",96.895270%,97.482149%,97.188709%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"ipc_instance","Executed IPC",2.488898,2.489753,2.489326
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"inst_replay_overhead","Instruction Replay Overhead",0.008194,0.008202,0.008198
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"shared_replay_overhead","Shared Memory Replay Overhead",0.000000,0.000000,0.000000
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"global_replay_overhead","Global Memory Replay Overhead",0.006974,0.006974,0.006974
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"global_cache_replay_overhead","Global Memory Cache Replay Overhead",0.000000,0.000000,0.000000
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"tex_cache_hit_rate","Texture Cache Hit Rate",43.979058%,43.979058%,43.979058%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"tex_cache_throughput","Texture Cache Throughput",53.997624GB/s,54.203732GB/s,54.100678GB/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"dram_read_throughput","Device Memory Read Throughput",24.048094GB/s,24.731131GB/s,24.389612GB/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"dram_write_throughput","Device Memory Write Throughput",25.442200GB/s,25.895610GB/s,25.668905GB/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"gst_throughput","Global Store Throughput",26.488528GB/s,26.589634GB/s,26.539081GB/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"gld_throughput","Global Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"local_replay_overhead","Local Memory Cache Replay Overhead",0.000000,0.000000,0.000000
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"shared_efficiency","Shared Memory Efficiency",45.732169%,45.732169%,45.732169%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"gld_efficiency","Global Memory Load Efficiency",0.000000%,0.000000%,0.000000%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"gst_efficiency","Global Memory Store Efficiency",78.154206%,78.154206%,78.154206%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l2_l1_read_hit_rate","L2 Hit Rate (L1 Reads)",0.000000%,0.000000%,0.000000%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l2_texture_read_hit_rate","L2 Hit Rate (Texture Reads)",19.190563%,20.936292%,20.063428%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l2_l1_read_throughput","L2 Throughput (L1 Reads)",0.000000B/s,0.000000B/s,0.000000B/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l2_texture_read_throughput","L2 Throughput (Texture Reads)",30.249978GB/s,30.365441GB/s,30.307710GB/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"local_memory_overhead","Local Memory Overhead",0.000000%,0.000000%,0.000000%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"warp_execution_efficiency","Warp Execution Efficiency",100.000000%,100.000000%,100.000000%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"nc_gld_requested_throughput","Requested Non-Coherent Global Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"issued_ipc","Issued IPC",2.505301,2.515748,2.510524
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"inst_per_warp","Instructions per warp",69948.000000,69948.000000,69948.000000
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"issue_slot_utilization","Issue Slot Utilization",48.898767%,49.102564%,49.000666%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"local_load_transactions_per_request","Local Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"local_store_transactions_per_request","Local Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"shared_load_transactions_per_request","Shared Memory Load Transactions Per Request",1.000000,1.000000,1.000000
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"shared_store_transactions_per_request","Shared Memory Store Transactions Per Request",1.000000,1.000000,1.000000
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"gld_transactions_per_request","Global Load Transactions Per Request",0.000000,0.000000,0.000000
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"gst_transactions_per_request","Global Store Transactions Per Request",1.833333,1.833333,1.833333
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"local_load_transactions","Local Load Transactions",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"local_store_transactions","Local Store Transactions",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"shared_load_transactions","Shared Load Transactions",212583168,212583168,212583168
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"shared_store_transactions","Shared Store Transactions",36338688,36338688,36338688
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"gld_transactions","Global Load Transactions",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"gst_transactions","Global Store Transactions",19780992,19780992,19780992
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"sysmem_read_transactions","System Memory Read Transactions",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"sysmem_write_transactions","System Memory Write Transactions",5,5,5
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"tex_cache_transactions","Texture Cache Transactions",98060928,98060928,98060928
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"dram_read_transactions","Device Memory Read Transactions",43671891,44741526,44206708
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"dram_write_transactions","Device Memory Write Transactions",46203621,46848205,46525913
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l2_read_transactions","L2 Read Transactions",55104173,55191118,55147645
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l2_write_transactions","L2 Write Transactions",48103778,48103778,48103778
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"local_load_throughput","Local Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"local_store_throughput","Local Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"shared_load_throughput","Shared Memory Load Throughput",936.477866GB/s,940.052372GB/s,938.265119GB/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"shared_store_throughput","Shared Memory Store Throughput",160.080299GB/s,160.691320GB/s,160.385809GB/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l2_read_throughput","L2 Throughput (Reads)",30.391200GB/s,30.459143GB/s,30.425171GB/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l2_write_throughput","L2 Throughput (Writes)",26.488529GB/s,26.589635GB/s,26.539082GB/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"sysmem_read_throughput","System Memory Read Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"sysmem_write_throughput","System Memory Write Throughput",2.753000KB/s,2.763000KB/s,2.758000KB/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"warp_nonpred_execution_efficiency","Warp Non-Predicated Execution Efficiency",90.635309%,90.635309%,90.635309%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"cf_issued","Issued Control-Flow Instructions",86741392,86742077,86741734
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"cf_executed","Executed Control-Flow Instructions",86740992,86740992,86740992
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"ldst_issued","Issued Load/Store Instructions",282640337,282648253,282644295
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"ldst_executed","Executed Load/Store Instructions",272097792,272097792,272097792
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"flop_count_sp","Floating Point Operations(Single Precision)",36134886144,36134886144,36134886144
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"flop_count_sp_add","Floating Point Operations(Single Precision Add)",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"flop_count_sp_mul","Floating Point Operation(Single Precision Mul)",2581063296,2581063296,2581063296
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"flop_count_sp_fma","Floating Point Operations(Single Precision FMA)",16776911424,16776911424,16776911424
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"flop_count_dp_add","Floating Point Operations(Double Precision Add)",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"flop_count_dp_mul","Floating Point Operations(Double Precision Mul)",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"flop_count_dp_fma","Floating Point Operations(Double Precison FMA)",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"flop_count_sp_special","Floating Point Operations(Single Precision Special)",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"stall_inst_fetch","Issue Stall Reasons (Instructions Fetch)",8.797649%,8.844396%,8.821022%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"stall_exec_dependency","Issue Stall Reasons (Execution Dependency)",12.560196%,12.588319%,12.574258%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"stall_memory_dependency","Issue Stall Reasons (Data Request)",18.037001%,18.202396%,18.119698%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"stall_texture","Issue Stall Reasons (Texture)",0.846695%,0.849001%,0.847848%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"stall_sync","Issue Stall Reasons (Synchronization)",20.395192%,20.557746%,20.476469%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"stall_other","Issue Stall Reasons (Other)",1.547871%,1.550613%,1.549242%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l1_shared_utilization","L1/Shared Memory Utilization","Mid (5)","Mid (5)","Mid (5)"
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l2_utilization","L2 Cache Utilization","Low (2)","Low (2)","Low (2)"
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"tex_utilization","Texture Cache Utilization","Low (1)","Low (1)","Low (1)"
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"dram_utilization","Device Memory Utilization","Low (3)","Low (3)","Low (3)"
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"sysmem_utilization","System Memory Utilization","Low (1)","Low (1)","Low (1)"
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"ldst_fu_utilization","Load/Store Function Unit Utilization","Mid (6)","Mid (6)","Mid (6)"
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"alu_fu_utilization","Arithmetic Function Unit Utilization","Mid (4)","Mid (4)","Mid (4)"
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"cf_fu_utilization","Control-Flow Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"tex_fu_utilization","Texture Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"inst_executed","Instructions Executed",1289281536,1289281536,1289281536
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"inst_issued","Instructions Issued",1299845324,1299855652,1299850488
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"issue_slots","Issue Slots",1014819364,1014829686,1014824525
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"nc_l2_read_throughput","L2 Throughput (Non-Coherent Reads)",0.000000B/s,0.000000B/s,0.000000B/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"nc_l2_read_transactions","L2 Non-Coherent Read Transactions",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"nc_cache_global_hit_rate","Non-Coherent Global Hit Rate",0.000000%,0.000000%,0.000000%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"nc_gld_throughput","Non-Coherent Global Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"nc_gld_efficiency","Non-Coherent Global Load Efficiency",0.000000%,0.000000%,0.000000%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l2_atomic_throughput","L2 Throughput (Atomic requests)",0.000000B/s,0.000000B/s,0.000000B/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"inst_fp_32","FP Instructions(Single)",19357974720,19357974720,19357974720
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"inst_fp_64","FP Instructions(Double)",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"inst_integer","Integer Instructions",4201702848,4201702848,4201702848
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"inst_bit_convert","Bit-Convert Instructions",645265824,645265824,645265824
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"inst_control","Control-Flow Instructions",543819360,543819360,543819360
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"inst_compute_ld_st","Load/Store Instructions",8374957648,8374957648,8374957648
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"inst_misc","Misc Instructions",4269697440,4269697440,4269697440
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"inst_inter_thread_communication","Inter-Thread Instructions",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"atomic_replay_overhead","Atomic Replay Overhead",0.000000,0.000000,0.000000
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"atomic_transactions","Atomic Transactions",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"atomic_transactions_per_request","Atomic Transactions Per Request",0.000000,0.000000,0.000000
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l2_l1_read_transactions","L2 Read Transactions (L1 read requests)",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l2_l1_write_transactions","L2 Write Transactions (L1 write requests)",48103776,48103776,48103776
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l2_tex_read_transactions","L2 Transactions (Texture Reads)",54934656,54934656,54934656
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l2_l1_write_throughput","L2 Throughput (L1 Writes)",26.488528GB/s,26.589634GB/s,26.539081GB/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"l2_atomic_transactions","L2 Transactions (Atomic requests)",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"ecc_transactions","ECC Transactions",0,0,0
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"ecc_throughput","ECC Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"stall_pipe_busy","Issue Stall Reasons (Pipe Busy)",19.982297%,20.104254%,20.043275%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"stall_constant_memory_dependency","Issue Stall Reasons (Immediate constant)",0.001065%,0.001094%,0.001079%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"flop_sp_efficiency","FLOP Efficiency(Peak Single)",17.647105%,17.680124%,17.663614%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"flop_dp_efficiency","FLOP Efficiency(Peak Double)",0.000000%,0.000000%,0.000000%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"stall_memory_throttle","Issue Stall Reasons (Memory Throttle)",0.775674%,0.776950%,0.776312%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"stall_not_selected","Issue Stall Reasons (Not Selected)",16.728382%,16.853210%,16.790796%
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"eligible_warps_per_cycle","Eligible Warps Per Active Cycle",11.540594,11.639909,11.590251
+"Tesla K20c (0)","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*)",2,"atomic_throughput","Atomic Throughput",0.000000B/s,0.000000B/s,0.000000B/s

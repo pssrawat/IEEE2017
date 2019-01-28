@@ -1,0 +1,26 @@
+==1707== NVPROF is profiling process 1707, command: ./jacobi-global-unroll
+==1707== Profiling application: ./jacobi-global-unroll
+==1707== Profiling result:
+"Start","Duration","Grid X","Grid Y","Grid Z","Block X","Block Y","Block Z","Registers Per Thread","Static SMem","Dynamic SMem","Size","Throughput","Device","Context","Stream","Name"
+s,ms,,,,,,,,KB,B,MB,GB/s,,,,
+0.546639,40.829209,,,,,,,,,,268.435456,6.574594,"Tesla K20c (0)","1","7","[CUDA memcpy HtoD]"
+0.588320,13.347023,64,512,1,32,16,1,26,0.000000,1.638400e+04,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, float*, float*, float*, int, int, float*) [121]"
+0.601671,2.834534,64,512,1,128,1,1,22,0.000000,0,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__1__(float*, int, int, int, int, float*) [130]"
+0.604508,2.965543,64,512,1,128,1,1,22,0.000000,0,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__2__(float*, int, int, int, int, float*) [139]"
+0.607477,3.051528,64,512,1,128,1,1,22,0.000000,0,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__3__(float*, int, int, int, int, float*) [148]"
+0.610532,3.208810,64,512,1,128,1,1,22,0.000000,0,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__4__(float*, int, int, int, int, float*) [157]"
+0.613743,40.776793,,,,,,,,,,268.435456,6.583045,"Tesla K20c (0)","1","7","[CUDA memcpy DtoH]"
+1.317085,40.763609,,,,,,,,,,268.435456,6.585174,"Tesla K20c (0)","1","7","[CUDA memcpy HtoD]"
+1.358570,13.342608,64,512,1,32,16,1,26,0.000000,1.638400e+04,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, float*, float*, float*, int, int, float*) [198]"
+1.371916,2.834821,64,512,1,128,1,1,22,0.000000,0,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__1__(float*, int, int, int, int, float*) [207]"
+1.374754,2.963495,64,512,1,128,1,1,22,0.000000,0,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__2__(float*, int, int, int, int, float*) [216]"
+1.377720,3.046088,64,512,1,128,1,1,22,0.000000,0,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__3__(float*, int, int, int, int, float*) [225]"
+1.380770,3.201739,64,512,1,128,1,1,22,0.000000,0,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__4__(float*, int, int, int, int, float*) [234]"
+1.383975,40.762808,,,,,,,,,,268.435456,6.585303,"Tesla K20c (0)","1","7","[CUDA memcpy DtoH]"
+1.440716,40.763961,,,,,,,,,,268.435456,6.585117,"Tesla K20c (0)","1","7","[CUDA memcpy HtoD]"
+1.482219,13.346928,64,512,1,32,16,1,26,0.000000,1.638400e+04,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, float*, float*, float*, int, int, float*) [275]"
+1.495569,2.834949,64,512,1,128,1,1,22,0.000000,0,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__1__(float*, int, int, int, int, float*) [284]"
+1.498407,2.964519,64,512,1,128,1,1,22,0.000000,0,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__2__(float*, int, int, int, int, float*) [293]"
+1.501375,3.051816,64,512,1,128,1,1,22,0.000000,0,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__3__(float*, int, int, int, int, float*) [302]"
+1.504430,3.203274,64,512,1,128,1,1,22,0.000000,0,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__4__(float*, int, int, int, int, float*) [311]"
+1.507637,40.767000,,,,,,,,,,268.435456,6.584626,"Tesla K20c (0)","1","7","[CUDA memcpy DtoH]"

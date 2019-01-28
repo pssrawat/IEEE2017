@@ -1,0 +1,14 @@
+==191611== NVPROF is profiling process 191611, command: ./test
+==191611== Profiling application: ./test
+==191611== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+321.87ms  58.897ms                    -               -         -         -         -  512.00MB  8.4893GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+381.85ms  5.9824ms            (19 43 1)       (32 16 1)        32        0B  4.0000KB         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*) [121]
+387.83ms  5.9797ms            (19 43 1)       (32 16 1)        32        0B  4.0000KB         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*) [132]
+393.82ms  41.623ms                    -               -         -         -         -  512.00MB  12.013GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

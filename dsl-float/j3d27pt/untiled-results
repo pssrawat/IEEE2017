@@ -1,0 +1,16 @@
+==191547== NVPROF is profiling process 191547, command: ./test
+==191547== Profiling application: ./test
+==191547== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+319.35ms  59.375ms                    -               -         -         -         -  512.00MB  8.4210GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+379.78ms  11.536ms         (32 128 128)        (16 4 4)        32        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel_j3d27pt0__(float*, int, int, int, float*) [117]
+391.32ms  11.574ms         (32 128 128)        (16 4 4)        32        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel_j3d27pt0__(float*, int, int, int, float*) [124]
+402.90ms  11.572ms         (32 128 128)        (16 4 4)        32        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel_j3d27pt0__(float*, int, int, int, float*) [131]
+414.47ms  11.575ms         (32 128 128)        (16 4 4)        32        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel_j3d27pt0__(float*, int, int, int, float*) [138]
+426.05ms  41.487ms                    -               -         -         -         -  512.00MB  12.052GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

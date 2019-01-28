@@ -1,0 +1,16 @@
+==146799== NVPROF is profiling process 146799, command: ./test
+==146799== Profiling application: ./test
+==146799== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+320.56ms  58.324ms                    -               -         -         -         -  512.00MB  8.5728GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+380.84ms  8.5791ms         (32 128 128)        (16 4 4)        30        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(float*, int, int, int, float*) [121]
+389.42ms  8.5759ms         (32 128 128)        (16 4 4)        30        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(float*, int, int, int, float*) [128]
+397.99ms  8.5744ms         (32 128 128)        (16 4 4)        30        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(float*, int, int, int, float*) [135]
+406.57ms  8.5689ms         (32 128 128)        (16 4 4)        30        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(float*, int, int, int, float*) [142]
+415.14ms  41.310ms                    -               -         -         -         -  512.00MB  12.104GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

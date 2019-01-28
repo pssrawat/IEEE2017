@@ -1,0 +1,16 @@
+==175225== NVPROF is profiling process 175225, command: ./test
+==175225== Profiling application: ./test
+==175225== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+320.70ms  29.494ms                    -               -         -         -         -  256.00MB  8.4764GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+351.49ms  1.5863ms          (512 256 1)       (16 32 1)        14        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(float*, int, int, float*) [120]
+353.08ms  1.5971ms          (512 256 1)       (16 32 1)        14        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(float*, int, int, float*) [127]
+354.68ms  1.5967ms          (512 256 1)       (16 32 1)        14        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(float*, int, int, float*) [134]
+356.28ms  1.5948ms          (512 256 1)       (16 32 1)        14        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel___forma_kernel__0__(float*, int, int, float*) [141]
+357.88ms  20.734ms                    -               -         -         -         -  256.00MB  12.058GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

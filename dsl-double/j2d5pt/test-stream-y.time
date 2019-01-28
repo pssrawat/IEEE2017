@@ -1,0 +1,27 @@
+==21586== NVPROF is profiling process 21586, command: ./test-stream-y
+==21586== Profiling application: ./test-stream-y
+==21586== Profiling result:
+"Time(%)","Time","Calls","Avg","Min","Max","Name"
+%,ms,,ms,ms,ms,
+28.060080,122.913230,3,40.971076,40.946138,41.016954,"[CUDA memcpy HtoD]"
+28.042503,122.836237,3,40.945412,40.933721,40.954842,"[CUDA memcpy DtoH]"
+22.922786,100.410036,3,33.470012,33.443569,33.485969,"__kernel___forma_kernel__1__(float*, int, int, float*, float*, float*, int, int, float*)"
+20.974630,91.876413,3,30.625471,30.616490,30.638570,"__kernel___forma_kernel__0__(float*, int, int, float*, float*, float*, int, int, float*)"
+
+==21586== API calls:
+"Time(%)","Time","Calls","Avg","Min","Max","Name"
+%,ms,,ms,ms,ms,
+81.519806,438.351274,6,73.058545,40.917934,105.169273,"cudaMemcpy"
+17.952399,96.534293,15,6.435619,0.183206,93.514454,"cudaMalloc"
+0.451605,2.428387,15,0.161892,0.154425,0.186028,"cudaFree"
+0.033372,0.179449,83,2.162000e-03,1.970000e-04,0.074051,"cuDeviceGetAttribute"
+0.022989,0.123618,6,0.020603,8.030000e-03,0.037437,"cudaLaunch"
+0.004409,0.023706,1,0.023706,0.023706,0.023706,"cuDeviceTotalMem"
+0.003788,0.020370,54,3.770000e-04,1.970000e-04,6.915000e-03,"cudaSetupArgument"
+0.003634,0.019540,6,3.256000e-03,1.853000e-03,5.316000e-03,"cudaPointerGetAttributes"
+0.003540,0.019036,1,0.019036,0.019036,0.019036,"cuDeviceGetName"
+0.002107,0.011329,27,4.190000e-04,1.880000e-04,1.826000e-03,"cudaGetLastError"
+0.001227,6.597000e-03,3,2.199000e-03,1.822000e-03,2.906000e-03,"cudaDeviceGetAttribute"
+0.000559,3.008000e-03,6,5.010000e-04,2.590000e-04,9.850000e-04,"cudaConfigureCall"
+0.000318,1.709000e-03,2,8.540000e-04,2.460000e-04,1.463000e-03,"cuDeviceGet"
+0.000248,1.333000e-03,2,6.660000e-04,3.320000e-04,1.001000e-03,"cuDeviceGetCount"

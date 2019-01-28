@@ -1,0 +1,16 @@
+==193061== NVPROF is profiling process 193061, command: ./test
+==193061== Profiling application: ./test
+==193061== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+318.42ms  116.34ms                    -               -         -         -         -  1.0000GB  8.5958GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+436.46ms  14.963ms         (32 128 128)        (16 4 4)        32        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel_j3d27pt0__(double*, int, int, int, double*) [117]
+451.42ms  14.953ms         (32 128 128)        (16 4 4)        32        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel_j3d27pt0__(double*, int, int, int, double*) [124]
+466.37ms  14.952ms         (32 128 128)        (16 4 4)        32        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel_j3d27pt0__(double*, int, int, int, double*) [131]
+481.33ms  14.949ms         (32 128 128)        (16 4 4)        32        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  __kernel_j3d27pt0__(double*, int, int, int, double*) [138]
+496.28ms  83.023ms                    -               -         -         -         -  1.0000GB  12.045GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

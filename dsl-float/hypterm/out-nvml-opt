@@ -1,0 +1,48 @@
+enabled = 1
+117604
+Values at index (4,4,4) differ : 0.015209 and 0.015209
+Values at index (4,4,24) differ : 0.016508 and 0.016508
+Values at index (4,21,29) differ : 0.002536 and 0.002536
+Values at index (4,34,22) differ : 0.011664 and 0.011664
+Values at index (8,56,250) differ : 0.033347 and 0.033347
+[Test] Max Error : 7.450581e-09 @ (8,56,250)
+[Test] RMS Error : 8.155164e-10
+Values at index (4,4,7) differ : -0.001583 and -0.001583
+Values at index (4,4,8) differ : 0.004045 and 0.004045
+Values at index (4,4,13) differ : 0.003907 and 0.003907
+Values at index (4,4,14) differ : -0.031573 and -0.031573
+Values at index (4,48,156) differ : -0.012302 and -0.012302
+Values at index (4,84,211) differ : -0.016665 and -0.016665
+Values at index (4,263,239) differ : -0.037204 and -0.037204
+[Test] Max Error : 7.450581e-09 @ (4,263,239)
+[Test] RMS Error : 7.911234e-10
+Values at index (4,4,6) differ : 0.000512 and 0.000512
+Values at index (4,4,11) differ : -0.023316 and -0.023316
+Values at index (4,4,142) differ : -0.013288 and -0.013288
+Values at index (4,4,157) differ : 0.003745 and 0.003745
+Values at index (4,4,194) differ : 0.022676 and 0.022676
+Values at index (4,18,191) differ : 0.012885 and 0.012885
+Values at index (4,23,67) differ : -0.017305 and -0.017305
+Values at index (4,59,163) differ : -0.035337 and -0.035337
+Values at index (69,278,211) differ : 0.000238 and 0.000238
+Values at index (81,134,288) differ : -0.024665 and -0.024665
+Values at index (210,217,195) differ : -0.041812 and -0.041812
+[Test] Max Error : 1.117587e-08 @ (210,217,195)
+[Test] RMS Error : 8.780539e-10
+Values at index (4,4,4) differ : 0.025645 and 0.025645
+Values at index (4,4,68) differ : 0.013622 and 0.013622
+Values at index (4,4,146) differ : -0.022080 and -0.022080
+Values at index (4,10,5) differ : -0.027629 and -0.027629
+Values at index (4,12,58) differ : -0.033224 and -0.033224
+Values at index (9,29,34) differ : -0.029804 and -0.029804
+Values at index (12,75,152) differ : -0.035448 and -0.035448
+[Test] Max Error : 1.117587e-08 @ (12,75,152)
+[Test] RMS Error : 1.002070e-09
+Values at index (4,4,4) differ : 0.025669 and 0.025669
+Values at index (4,4,12) differ : -0.013797 and -0.013797
+Values at index (4,4,22) differ : -0.038539 and -0.038539
+Values at index (4,4,266) differ : 0.037876 and 0.037876
+Values at index (4,169,97) differ : -0.035990 and -0.035990
+Values at index (5,67,115) differ : -0.054195 and -0.054195
+[Test] Max Error : 1.490116e-08 @ (5,67,115)
+[Test] RMS Error : 1.311527e-09
